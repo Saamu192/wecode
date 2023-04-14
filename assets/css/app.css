@@ -11,7 +11,7 @@
 [x-cloak] { display: none; }
 
 .button {
-  @apply inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md leading-5 transition hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+  @apply inline-flex justify-center px-4 py-2 text-sm font-medium text-black bg-green-100 border border-transparent rounded-md leading-5 transition hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
 }
 
 .button[disabled] {
@@ -190,11 +190,11 @@ blockquote {
 }
 
 .dark .table-striped tbody tr:nth-child(odd) {
-  background-color: rgb(37, 47, 63);
+  background-color: #f1f5f8;
 }
 
 .dark .table-striped tbody tr:nth-child(even) {
-  background-color: rgb(26, 32, 44);
+  background-color: #f1f5f8;
 }
 
 .stats-item {
@@ -297,7 +297,7 @@ iframe[hidden] {
 
 @media (prefers-color-scheme: dark) {
   .active-prop-heading {
-    text-decoration-color: #6366F1; /* tailwind's indigo-500 */
+    text-decoration-color: #26a726; /* tailwind's indigo-500 */
   }
 
 }
@@ -308,7 +308,7 @@ iframe[hidden] {
 
 
 .popper-tooltip {
-  background-color: rgba(25, 30, 56);
+  background-color: #f1f5f8;
 }
 
 .tooltip-arrow,

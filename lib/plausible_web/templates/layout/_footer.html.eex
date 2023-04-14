@@ -29,41 +29,6 @@
               Why Plausible?
             </h4>
             <ul class="mt-4">
-              <li>
-                <a rel="noreferrer" href="https://plausible.io/simple-web-analytics" class="text-base text-gray-300 leading-6 hover:text-white">
-                  Simple metrics
-                </a>
-              </li>
-              <li class="mt-4">
-                <a rel="noferrer" href="https://plausible.io/lightweight-web-analytics" class="text-base text-gray-300 leading-6 hover:text-white">
-                  Lightweight script
-                </a>
-              </li>
-              <li class="mt-4">
-                <a rel="noreferrer" href="https://plausible.io/privacy-focused-web-analytics" class="text-base text-gray-300 leading-6 hover:text-white">
-                  Privacy focused
-                </a>
-              </li>
-              <li class="mt-4">
-                <a rel="noreferrer" href="https://plausible.io/open-source-website-analytics" class="text-base text-gray-300 leading-6 hover:text-white">
-                  Open source
-                </a>
-              </li>
-               <li class="mt-4">
-                <a rel="noreferrer" href="https://plausible.io/for-bloggers-creators" class="text-base leading-6 text-gray-300 hover:text-white">
-                  For creators
-                </a>
-              </li>
-              <li class="mt-4">
-                <a rel="noreferrer" href="https://plausible.io/for-freelancers-agencies" class="text-base leading-6 text-gray-300 hover:text-white">
-                  For agencies
-                </a>
-              </li>
-              <li class="mt-4">
-                <a rel="noreferrer" href="https://plausible.io/for-ecommerce-saas" class="text-base leading-6 text-gray-300 hover:text-white">
-                  For ecommerce
-                </a>
-              </li>
             </ul>
           </div>
           <div class="mt-32 md:mt-0">
@@ -111,9 +76,6 @@
                 </a>
               </li>
               <li class="mt-4">
-                <a rel="noreferrer" target="_blank" href="https://github.com/plausible/analytics" class="text-base leading-6 text-gray-300 hover:text-white">
-                  GitHub
-                </a>
               </li>
               <li class="mt-4">
                 <a rel="noreferrer" target="_blank" href="https://twitter.com/plausiblehq" class="text-base leading-6 text-gray-300 hover:text-white">
