@@ -8,14 +8,12 @@ services:
     # supported versions are 12, 13, and 14
     image: postgres:14-alpine
     ports:
-      - 5435:5432
+      - 5432:5432
     restart: always
     volumes:
       - db-data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_PASSWORD=1234
-      - POSTGRES_USER=wecode
-      - POSTGRES_DB=wecode_db
+      - POSTGRES_PASSWORD=postgres
 
   plausible_events_db:
     image: clickhouse/clickhouse-server:22.6-alpine
@@ -38,7 +36,7 @@ services:
       - plausible_events_db
       - mail
     ports:
-      - 3500:8000
+      - 8000:8000
     env_file:
       - plausible-conf.env
 
