@@ -168,6 +168,7 @@ function handleTaggedElementClickEvent(event) {
     var eventAttrs = getTaggedEventAttributes(taggedElement)
 
     if (clickedLink) {
+      console.log({eventAttrs});
       eventAttrs.props.url = clickedLink.href
       sendLinkClickEvent(event, clickedLink, eventAttrs)
     } else {

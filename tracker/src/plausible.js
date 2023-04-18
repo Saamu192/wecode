@@ -76,7 +76,7 @@
     if (options && options.props) {
       payload.p = options.props
     }
-
+    console.log({payload});
     {{#if pageview_props}}
     var propAttributes = scriptEl.getAttributeNames().filter(function (name) {
       return name.substring(0, 6) === 'event-'
@@ -96,6 +96,8 @@
     {{#if hash}}
     payload.h = 1
     {{/if}}
+
+    console.log(payload);g
 
     var request = new XMLHttpRequest();
     request.open('POST', endpoint, true);
