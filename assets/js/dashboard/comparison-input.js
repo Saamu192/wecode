@@ -68,7 +68,7 @@ function ComparisonModeOption({ label, value, isCurrentlySelected, updateMode, s
 
   const render = ({ active }) => {
     const buttonClass = classNames("px-4 py-2 w-full text-left font-medium text-sm dark:text-white cursor-pointer", {
-      "bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100": active,
+      "bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-700": active,
       "font-bold": isCurrentlySelected,
     })
 
@@ -92,7 +92,7 @@ function MatchDayOfWeekInput({ history, query, site }) {
 
   const buttonClass = (hover, selected) =>
     classNames("px-4 py-2 w-full text-left font-medium text-sm dark:text-white cursor-pointer", {
-      "bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100": hover,
+      "bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-700": hover,
       "font-bold": selected,
     })
 

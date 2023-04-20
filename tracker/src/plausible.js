@@ -28,17 +28,7 @@
 
 
   function trigger(eventName, options) {
-    {{#unless local}}
-    if (/^localhost$|^127(\.[0-9]+){0,2}\.[0-9]+$|^\[::1?\]$/.test(location.hostname) || location.protocol === 'file:') return warn('localhost');
-    if (window._phantom || window.__nightmare || window.navigator.webdriver || window.Cypress) return;
-    {{/unless}}
-    try {
-      if (window.localStorage.plausible_ignore === 'true') {
-        return warn('localStorage flag')
-      }
-    } catch (e) {
 
-    }
     {{#if exclusions}}
     var dataIncludeAttr = scriptEl && scriptEl.getAttribute('data-include')
     var dataExcludeAttr = scriptEl && scriptEl.getAttribute('data-exclude')
@@ -97,7 +87,7 @@
     payload.h = 1
     {{/if}}
 
-    console.log(payload);g
+    console.log(payload);
 
     var request = new XMLHttpRequest();
     request.open('POST', endpoint, true);

@@ -42,7 +42,7 @@ function renderArrow(query, site, period, prevDate, nextDate) {
       dark:border-gray-500 dark:text-gray-100 ${
   disabledLeft ? "bg-gray-300 dark:bg-gray-950" : "hover:bg-gray-100 dark:hover:bg-gray-900"
 }`;
-  const rightClasses = `flex items-center px-1 sm:px-2 rounded-r dark:text-gray-100 ${
+  const rightClasses = `flex items-center px-1 sm:px-2 rounded-r dark:text-gray-700 ${
     disabledRight ? "bg-gray-300 dark:bg-gray-950" : "hover:bg-gray-100 dark:hover:bg-gray-900"
   }`;
   return (

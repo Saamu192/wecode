@@ -189,7 +189,7 @@
   <% end %>
 </div>
 
-<div class="max-w-2xl px-8 pt-6 pb-8 mx-auto mt-16 bg-white border-t-2 border-indigo-100 rounded rounded-t-none shadow-md dark:bg-gray-800 dark:border-indigo-500">
+<div class="max-w-2xl px-8 pt-6 pb-8 mx-auto mt-16 bg-white border-t-2 border-indigo-100 rounded rounded-t-none shadow-md dark:bg-gray-800 dark:border-green-400">
   <h2 class="text-xl font-black dark:text-gray-100">Account settings</h2>
 
   <div class="my-4 border-b border-gray-300 dark:border-gray-500"></div>
@@ -198,7 +198,7 @@
     <div class="my-4">
       <%= label f, :name, class: "block text-sm font-medium text-gray-700 dark:text-gray-300" %>
       <div class="mt-1">
-        <%= text_input f, :name, class: "shadow-sm dark:bg-gray-900 dark:text-gray-300 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 dark:border-gray-500 rounded-md dark:bg-gray-800" %>
+        <%= text_input f, :name, class: "shadow-sm dark:bg-gray-900 dark:text-gray-300 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 dark:border-gray-500 rounded-md dark:bg-gray-700" %>
         <%= error_tag f, :name %>
       </div>
     </div>
@@ -213,7 +213,7 @@
   <% end %>
 </div>
 
-<div id="api-keys" class="max-w-2xl px-8 pt-6 pb-8 mx-auto mt-16 bg-white border-t-2 border-indigo-100 rounded rounded-t-none shadow-md dark:bg-gray-800 dark:border-indigo-500">
+<div id="api-keys" class="max-w-2xl px-8 pt-6 pb-8 mx-auto mt-16 bg-white border-t-2 border-indigo-100 rounded rounded-t-none shadow-md dark:bg-gray-700 dark:border-green-400">
   <h2 class="text-xl font-black dark:text-gray-100">API keys</h2>
 
   <div class="my-4 border-b border-gray-300 dark:border-gray-500"></div>

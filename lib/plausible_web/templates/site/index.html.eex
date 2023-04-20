@@ -24,7 +24,7 @@
   <% end %>
 
   <div class="mt-6 pb-5 border-b border-gray-200 dark:border-gray-500 flex items-center justify-between">
-    <h2 class="text-2xl font-bold leading-7 text-gray-100 dark:text-gray-100 sm:text-3xl sm:leading-9 sm:truncate flex-shrink-0">
+    <h2 class="text-2xl font-bold leading-7 text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-9 sm:truncate flex-shrink-0">
       My sites
     </h2>
     <a href="/sites/new" class="button my-2 sm:my-0 w-auto">+ Add a website</a>
@@ -37,7 +37,7 @@
 
     <%= for invitation <- @invitations do %>
       <div class="group cursor-pointer" @click="invitationOpen = true; selectedInvitation = invitations['<%= invitation.invitation_id %>']">
-        <li class="col-span-1 bg-white dark:bg-gray-800 rounded-lg shadow p-4 group-hover:shadow-lg cursor-pointer">
+        <li class="col-span-1 bg-white dark:bg-gray-700 rounded-lg shadow p-4 group-hover:shadow-lg cursor-pointer">
           <div class="w-full flex items-center justify-between space-x-4">
             <img src="/favicon/sources/<%= invitation.site.domain %>.ico" onerror="this.onerror=null; this.src='/favicon/sources/placeholder';" class="w-4 h-4 flex-shrink-0 mt-px">
             <div class="flex-1 truncate -mt-px">
@@ -62,7 +62,7 @@
     <%= for site <- @sites do %>
       <div class="relative">
         <%= link(to: "/" <> URI.encode_www_form(site.domain)) do %>
-          <li class="col-span-1 bg-white dark:bg-gray-800 rounded-lg shadow p-4 group-hover:shadow-lg cursor-pointer">
+          <li class="col-span-1 bg-white dark:bg-gray-700 rounded-lg shadow p-4 group-hover:shadow-lg cursor-pointer">
             <div class="w-full flex items-center justify-between space-x-4">
               <img src="/favicon/sources/<%= site.domain %>.ico" class="w-4 h-4 flex-shrink-0 mt-px">
               <div class="flex-1 -mt-px w-full">

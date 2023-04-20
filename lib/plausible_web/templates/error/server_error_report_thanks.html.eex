@@ -11,9 +11,8 @@
       </div>
       <div class="mb-6 mt-12">
       <p class="text-sm text-center">
-        <%= link("Home page", to: "/", class: "text-indigo-500 mr-8") %>
-        <%= link("Status page", to: "https://status.plausible.io", class: "mr-8 text-indigo-500") %>
-        <%= link("Contact us", to: "https://plausible.io/contact", class: "text-indigo-500") %>
+        <%= link("Home page", to: "/", class: "text-gray-500 mr-8") %>
+
       </p>
       </div>
   </div>

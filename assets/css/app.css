@@ -11,7 +11,7 @@
 [x-cloak] { display: none; }
 
 .button {
-  @apply inline-flex justify-center px-4 py-2 text-sm font-medium text-black bg-green-100 border border-transparent rounded-md leading-5 transition hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+  @apply inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-green-400 border border-transparent rounded-md leading-5 transition hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
 }
 
 .button[disabled] {
@@ -69,6 +69,14 @@ blockquote {
 
 .light-text {
   color: #F0F4F8;
+}
+
+.background-white{
+  background-color: #ffffff;
+}
+
+.dark .background-dark{
+  background-color: #656565;
 }
 
 .transition {
@@ -154,7 +162,7 @@ blockquote {
     right: 8px;
     left: auto;
     border: 8px solid transparent;
-    border-bottom-color: rgba(27,31,35,0.15);
+    border-bottom-color:#656565;
 }
 
 .dropdown-content::before, .dropdown-content::after {
@@ -190,11 +198,11 @@ blockquote {
 }
 
 .dark .table-striped tbody tr:nth-child(odd) {
-  background-color: #f1f5f8;
+  background-color: #656565;
 }
 
 .dark .table-striped tbody tr:nth-child(even) {
-  background-color: #f1f5f8;
+  background-color: #656565;
 }
 
 .stats-item {
@@ -244,13 +252,13 @@ blockquote {
 
 /* Only because the map handler doesn't expose an easier way to change the shadow color */
 .dark .hoverinfo {
-  box-shadow: 1px 1px 5px rgb(26, 32, 44);
+  box-shadow: 1px 1px 5px #656565;
 }
 
 .fullwidth-shadow::before {
   @apply absolute top-0 w-screen h-full bg-gray-50 dark:bg-gray-850;
 
-  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 2px -2px #656565;
   content: "";
   z-index: -1;
   left: calc(-1 * calc(50vw - 50%));
@@ -258,7 +266,7 @@ blockquote {
 }
 
 .dark .fullwidth-shadow::before {
-  box-shadow: 0 4px 2px -2px rgba(200, 200, 200, 0.1);
+  box-shadow: 0 4px 2px -2px #656565;
 }
 
 iframe[hidden] {
@@ -278,7 +286,7 @@ iframe[hidden] {
 }
 
 #chartjs-tooltip {
-  background-color: rgba(25, 30, 56);
+  background-color: #656565;
   position: absolute;
   font-size: 14px;
   font-style: normal;
@@ -291,13 +299,13 @@ iframe[hidden] {
 .active-prop-heading {
   /* Properties related to text-decoration are all here in one place. TailwindCSS does support underline but that's about it. */
   text-decoration-line: underline;
-  text-decoration-color: #4338CA; /* tailwind's indigo-700 */
+  text-decoration-color: #5ECD81; /* tailwind's indigo-700 */
   text-decoration-thickness: 2px;
 }
 
 @media (prefers-color-scheme: dark) {
   .active-prop-heading {
-    text-decoration-color: #26a726; /* tailwind's indigo-500 */
+    text-decoration-color: #5ECD81; /* tailwind's indigo-500 */
   }
 
 }
@@ -308,7 +316,7 @@ iframe[hidden] {
 
 
 .popper-tooltip {
-  background-color: #f1f5f8;
+  background-color: rgba(25, 30, 56);
 }
 
 .tooltip-arrow,
