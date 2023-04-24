@@ -116,21 +116,21 @@
 }
 
 .flatpickr-day.startRange {
-  background: #6574cd !important;
-  border-color: #6574cd !important;
+  background:  #1fd355 !important;
+  border-color: #1fd355 !important;
 }
 
 .flatpickr-day.endRange {
-  background: #6574cd !important;
-  border-color: #6574cd !important;
+  background:  #1fd355 !important;
+  border-color:  #1fd355 !important;
 }
 
 .dark .flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)), .flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)), .flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)) {
-	-webkit-box-shadow: -10px 0 0 #4556c3 !important;
-	box-shadow: -10px 0 0 #4556c3 !important;
+	-webkit-box-shadow: -10px 0 0  #1fd355 !important;
+	box-shadow: -10px 0 0  #1fd355 !important;
 }
 
 .flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)), .flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)), .flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)) {
-	-webkit-box-shadow: -10px 0 0 #4556c3 !important;
-	box-shadow: -10px 0 0 #4556c3 !important;
+	-webkit-box-shadow: -10px 0 0  #1fd355 !important;
+	box-shadow: -10px 0 0  #1fd355 !important;
 }

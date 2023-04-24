@@ -1,5 +1,5 @@
 <%= form_for @conn, "/login", [class: "w-full max-w-md mx-auto bg-white dark:bg-gray-800 shadow-md rounded px-8 py-6 mt-8"], fn f -> %>
-  <h1 class="text-xl font-black dark:text-gray-100"><%= get_flash(@conn, :login_title) || "Entre com seu e-mail e senha" %></h1>
+  <h1 class="text-xl font-black dark:text-gray-100"><%= get_flash(@conn, :login_title) || "Digite seu e-mail e senha" %></h1>
   <%= if get_flash(@conn, :login_instructions) do %>
     <p class="text-gray-500 text-sm mt-1 mb-2"><%= get_flash(@conn, :login_instructions) %></p>
   <% end %>

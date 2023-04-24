@@ -372,7 +372,7 @@ defmodule PlausibleWeb.AuthController do
     else
       :wrong_password ->
         render(conn, "login_form.html",
-          error: "Wrong email or password. Please try again.",
+          error: "E-mail ou senha incorretos. Tente novamente.",
           layout: {PlausibleWeb.LayoutView, "focus.html"}
         )
 
@@ -380,7 +380,7 @@ defmodule PlausibleWeb.AuthController do
         Plausible.Auth.Password.dummy_calculation()
 
         render(conn, "login_form.html",
-          error: "Wrong email or password. Please try again.",
+          error: "E-mail ou senha incorretos. Tente novamente.",
           layout: {PlausibleWeb.LayoutView, "focus.html"}
         )
 
@@ -388,7 +388,7 @@ defmodule PlausibleWeb.AuthController do
         render_error(
           conn,
           429,
-          "Too many login attempts. Wait a minute before trying again."
+          "Você excedeu o número de tentativas. Tente novamente em alguns minutos."
         )
     end
   end

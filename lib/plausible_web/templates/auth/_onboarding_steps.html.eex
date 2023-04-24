@@ -1,7 +1,7 @@
 <div class="pt-6 px-4 sm:px-6 lg:px-8">
   <nav class="flex justify-center">
     <ol class="space-y-6">
-      <%= for {step, index} <- Enum.with_index(["Register", "Activate account", "Add site info", "Install snippet"]) do %>
+      <%= for {step, index} <- Enum.with_index(["Registre-se", "Ative sua conta", "Adicione um site", "Instale o snippet"]) do %>
         <%= if index < @current_step do %>
           <!-- Complete Step -->
           <li class="flex items-start">

@@ -1,19 +1,19 @@
 <div class="mx-auto mt-6 text-center dark:text-white-300">
   <h1 class="text-3xl font-black text-gray-900">
     <%= if @is_selfhost do %>
-    Register your Context Analytics account
+    Faça seu cadastro na Context Analytics
     <% else %>
     Register your 30-day unlimited-use free trial
     <% end %>
   </h1>
-  <div class="text-xl text-green-400 font-medium">Set up privacy-friendly analytics with just a few clicks</div>
+  <div class="text-xl text-green-400 font-medium">Crie sua conta gratuitamente em poucos cliques informando apenas os dados abaixo</div>
 </div>
 
 <div class="w-full max-w-3xl mt-4 mx-auto flex flex-shrink-0">
   <%= form_for @changeset, "/register", [class: "w-full max-w-md mx-auto bg-white dark:bg-gray-800 shadow-md rounded px-8 py-6 mb-4 mt-8", id: "register-form"], fn f -> %>
-    <h2 class="text-xl font-black dark:text-gray-700">Enter your details</h2>
+    <h2 class="text-xl font-black dark:text-gray-700">Preencha seus dados</h2>
     <div class="my-4">
-      <%= label f, :name, "Full name", class: "block text-sm font-medium text-gray-700 dark:text-gray-300" %>
+      <%= label f, :name, "Nome Completo", class: "block text-sm font-medium text-gray-700 dark:text-gray-300" %>
       <div class="mt-1">
         <%= text_input f, :name, class: "dark:bg-gray-900 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 dark:border-gray-500 rounded-md dark:text-gray-300", placeholder: "Jane Doe" %>
       </div>
@@ -22,10 +22,10 @@
     <div class="my-4">
       <div class="flex justify-between">
       <%= label f, :email, class: "block text-sm font-medium text-gray-700 dark:text-gray-300" %>
-      <p class="text-xs text-gray-500 mt-1">No spam, guaranteed.</p>
+      <p class="text-xs text-gray-500 mt-1">Nâo enviamos spam, garantimos.</p>
       </div>
       <div class="mt-1">
-        <%= email_input f, :email, class: "dark:bg-gray-900 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 dark:border-gray-500 rounded-md dark:text-gray-300", placeholder: "example@email.com" %>
+        <%= email_input f, :email, class: "dark:bg-gray-900 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 dark:border-gray-500 rounded-md dark:text-gray-300", placeholder: "exemplo@email.com" %>
       </div>
       <%= error_tag f, :email %>
     </div>
@@ -33,7 +33,7 @@
     <div class="my-4">
       <div class="flex justify-between">
       <%= label f, :password, class: "block text-sm font-medium text-gray-700 dark:text-gray-300" %>
-      <p class="text-xs text-gray-500 mt-1">Min 6 characters</p>
+      <p class="text-xs text-gray-500 mt-1">Min 6 caracteres</p>
       </div>
       <div class="mt-1">
         <%= password_input f, :password, class: "dark:bg-gray-900 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 dark:border-gray-500 rounded-md dark:text-gray-300" %>
@@ -62,7 +62,7 @@
     <%
       submit_text =
         if @is_selfhost do
-          "Create my account →"
+          "Criar minha conta →"
         else
           "Start my free trial →"
         end
@@ -70,7 +70,7 @@
     <%= submit submit_text, class: "button mt-4 w-full" %>
 
     <p class="text-center text-gray-600 dark:text-gray-500  text-xs mt-4">
-      Already have an account? <%= link("Log in", to: "/login", class: "underline text-gray-800 dark:text-gray-50") %> instead.
+      Já possui uma conta? <%= link("Faça o login", to: "/login", class: "underline text-gray-800 dark:text-gray-50") %> agora mesmo.
     </p>
   <% end %>
   <div class="pt-12 pl-8 hidden md:block">
