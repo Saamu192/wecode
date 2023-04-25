@@ -175,13 +175,13 @@ export default class Locations extends React.Component {
         >
           <div className="w-full flex justify-between">
             <h3 className="font-bold dark:text-gray-100">
-              {labelFor[this.state.mode] || 'Locations'}
+              {labelFor[this.state.mode] || 'Localização'}
             </h3>
             <div className="flex font-medium text-xs text-gray-500 dark:text-gray-400 space-x-2">
-              { this.renderPill('Map', 'map') }
-              { this.renderPill('Countries', 'countries') }
-              { this.renderPill('Regions', 'regions') }
-              { this.renderPill('Cities', 'cities') }
+              { this.renderPill('Mapa', 'map') }
+              { this.renderPill('Países', 'countries') }
+              { this.renderPill('Regiões', 'regions') }
+              { this.renderPill('Cidades', 'cities') }
             </div>
           </div>
           { this.renderContent() }

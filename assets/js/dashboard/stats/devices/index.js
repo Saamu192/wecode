@@ -14,7 +14,7 @@ function Browsers({ query, site }) {
     <ListReport
       fetchData={fetchData}
       filter={{ browser: 'name' }}
-      keyLabel="Browser"
+      keyLabel="Navegador"
       query={query}
     />
   )
@@ -32,7 +32,7 @@ function BrowserVersions({ query, site }) {
     <ListReport
       fetchData={fetchData}
       filter={filter}
-      keyLabel="Browser version"
+      keyLabel="Versâo do Navegador"
       query={query}
     />
   )
@@ -48,7 +48,7 @@ function OperatingSystems({ query, site }) {
     <ListReport
       fetchData={fetchData}
       filter={{ os: 'name' }}
-      keyLabel="Operating system"
+      keyLabel="Sistema Operacional"
       query={query}
     />
   )
@@ -66,7 +66,7 @@ function OperatingSystemVersions({ query, site }) {
     <ListReport
       fetchData={fetchData}
       filter={filter}
-      keyLabel="Operating System Version"
+      keyLabel="Versâo do Sistema Operacional"
       query={query}
     />
   )
@@ -184,11 +184,11 @@ export default class Devices extends React.Component {
           className="stats-item-header flex flex-col flex-grow relative p-4 bg-white rounded shadow-xl dark:bg-gray-825"
         >
           <div className="flex justify-between w-full">
-            <h3 className="font-bold dark:text-gray-100">Devices</h3>
+            <h3 className="font-bold dark:text-gray-100">Dispositivos</h3>
             <div className="flex text-xs font-medium text-gray-500 dark:text-gray-400 space-x-2">
-              {this.renderPill('Browser', 'browser')}
-              {this.renderPill('OS', 'os')}
-              {this.renderPill('Size', 'size')}
+              {this.renderPill('Navegador', 'browser')}
+              {this.renderPill('Sistema', 'os')}
+              {this.renderPill('Dispositivo', 'size')}
             </div>
           </div>
           {this.renderContent()}
