@@ -287,11 +287,11 @@ defmodule PlausibleWeb.Api.StatsController do
         value: Stats.current_visitors(site)
       },
       %{
-        name: "Unique conversions (last 30 min)",
+        name: "Unique conversions (Últimos 30 min)",
         value: unique_conversions
       },
       %{
-        name: "Total conversions (last 30 min)",
+        name: "Total conversions (Últimos 30 min)",
         value: total_conversions
       }
     ]
@@ -313,11 +313,11 @@ defmodule PlausibleWeb.Api.StatsController do
         value: Stats.current_visitors(site)
       },
       %{
-        name: "Visitantes únicos (last 30 min)",
+        name: "Visitantes únicos (Últimos 30 min)",
         value: visitors
       },
       %{
-        name: "Pageviews (last 30 min)",
+        name: "Visualizações de página (Últimos 30 min)",
         value: pageviews
       }
     ]

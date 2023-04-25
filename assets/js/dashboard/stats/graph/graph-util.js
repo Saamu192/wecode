@@ -72,9 +72,9 @@ const buildMainPlotDataset = function(plot, presentIndex) {
 
   return [{
     data: data,
-    borderColor: 'rgba(101,116,205)',
-    pointBackgroundColor: 'rgba(101,116,205)',
-    pointHoverBackgroundColor: 'rgba(71, 87, 193)',
+    borderColor: 'rgba(0, 190, 37)',
+    pointBackgroundColor: 'rgba(0, 190, 37)',
+    pointHoverBackgroundColor: 'rgba(71, 194, 71)',
     yAxisID: 'y',
   }]
 }
@@ -82,10 +82,10 @@ const buildMainPlotDataset = function(plot, presentIndex) {
 export const buildDataSet = (plot, comparisonPlot, present_index, ctx, label) => {
   var gradient = ctx.createLinearGradient(0, 0, 0, 300);
   var prev_gradient = ctx.createLinearGradient(0, 0, 0, 300);
-  gradient.addColorStop(0, 'rgba(101,116,205, 0.2)');
-  gradient.addColorStop(1, 'rgba(101,116,205, 0)');
-  prev_gradient.addColorStop(0, 'rgba(101,116,205, 0.075)');
-  prev_gradient.addColorStop(1, 'rgba(101,116,205, 0)');
+  gradient.addColorStop(0, 'rgba(0, 190, 37, 0.2)');
+  gradient.addColorStop(1, 'rgba(0, 190, 37, 0)');
+  prev_gradient.addColorStop(0, 'rgba(0, 190, 37, 0.075)');
+  prev_gradient.addColorStop(1, 'rgba(0, 190, 37, 0)');
 
   const defaultOptions = { label, borderWidth: 3, pointBorderColor: "transparent", pointHoverRadius: 4, backgroundColor: gradient, fill: true }
 

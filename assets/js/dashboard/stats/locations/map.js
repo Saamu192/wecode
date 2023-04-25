@@ -55,8 +55,8 @@ class Countries extends React.Component {
     const paletteScale = d3.scale.linear()
       .domain([0,maxValue])
       .range([
-        this.state.darkTheme ? "#2e3954" : "#f3ebff",
-        this.state.darkTheme ? "#6366f1" : "#a779e9"
+        this.state.darkTheme ? "#2d552d" : "#f3ebff",
+        this.state.darkTheme ? "#64f264" : "#77e977"
       ])
 
     this.state.countries.forEach(function(item){
@@ -87,7 +87,7 @@ class Countries extends React.Component {
     const defaultFill = this.state.darkTheme ? '#2d3747' : '#f8fafc'
     const highlightFill = this.state.darkTheme ? '#374151' : '#F5F5F5'
     const borderColor = this.state.darkTheme ? '#1f2937' : '#dae1e7'
-    const highlightBorderColor = this.state.darkTheme ? '#4f46e5' : '#a779e9'
+    const highlightBorderColor = this.state.darkTheme ? '#48e548' : '#77e977'
 
     this.map = new Datamap({
       element: document.getElementById('map-container'),
