@@ -1,5 +1,5 @@
-You've activated your free 30-day trial of Plausible, a simple and privacy-friendly website analytics tool.
+Você ativou sua avaliação gratuita de 30 dias do Context, uma ferramenta de análise de sites simples e amigável à privacidade.
 <br /><br />
-<%= link("Click here", to: "#{plausible_url()}/sites/new") %> to add your website URL, your timezone and install our one-line JavaScript snippet to start collecting visitor statistics.
+<%= link("Clique aqui", to: "#{plausible_url()}/sites/new") %> para adicionar o URL do seu site, seu fuso horário e instalar nosso snippet de JavaScript de uma linha para começar a coletar estatísticas de visitantes.
 <br /><br />
-Do reply back to this email if you have any questions or need some guidance.
+Responda a este e-mail se tiver alguma dúvida ou precisar de orientação.

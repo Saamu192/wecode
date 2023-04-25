@@ -1,3 +1,2 @@
-<%= @invitation.inviter.email %> has invited you to the <%= @invitation.site.domain %> site on Plausible Analytics.
-<%= link("Click here", to: Routes.site_url(PlausibleWeb.Endpoint, :index)) %> to view and respond to the invitation. The invitation
-will expire 48 hours after this email is sent.
+<%= @invitation.inviter.email %> convidou você para o<%= @invitation.site.domain %> dashboard do site na Context Analytics.
+<%= link("Clique aqui", to: Routes.site_url(PlausibleWeb.Endpoint, :index)) %>para visualizar e responder. O convite irá expirar em 48 horas a partir da hora de envio.

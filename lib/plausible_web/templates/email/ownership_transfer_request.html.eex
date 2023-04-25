@@ -1,8 +1,8 @@
-<%= @invitation.inviter.email %> has requested to transfer the ownership of <%= @invitation.site.domain %> site on Plausible Analytics to you.
+<%= @invitation.inviter.email %> solicitou a transferência da propriedade do site <%= @invitation.site.domain %> no Context Analytics para você.
 <%= if @new_owner_account do %>
-  <%= link("Click here", to: Routes.site_url(PlausibleWeb.Endpoint, :index)) %> to view and respond to the invitation.
+  <%= link("Clique aqui", to: Routes.site_url(PlausibleWeb.Endpoint, :index)) %> para visualizar e responder ao convite.
 <% else %>
-  <%= link("Click here", to: Routes.auth_url(PlausibleWeb.Endpoint, :register_form), invitation: @invitation.invitation_id) %> to create your account.
+  <%= link("Clique aqui", to: Routes.auth_url(PlausibleWeb.Endpoint, :register_form), invitation: @invitation.invitation_id) %> para criar sua conta.
   <br /><br />
-  Plausible is a lightweight and open-source website analytics tool. We hope you like our simple and ethical approach to tracking website visitors.
+  Context é uma ferramenta de análise de sites leve e de código aberto. Esperamos que você goste de nossa abordagem simples e ética para rastrear os visitantes do site.
 <% end %>

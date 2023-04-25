@@ -287,11 +287,11 @@ defmodule PlausibleWeb.Api.StatsController do
         value: Stats.current_visitors(site)
       },
       %{
-        name: "Unique conversions (Últimos 30 min)",
+        name: "Conversões únicas (Últimos 30 min)",
         value: unique_conversions
       },
       %{
-        name: "Total conversions (Últimos 30 min)",
+        name: "Conversões totais (Últimos 30 min)",
         value: total_conversions
       }
     ]
@@ -418,13 +418,13 @@ defmodule PlausibleWeb.Api.StatsController do
 
     stats =
       [
-        top_stats_entry(current_results, prev_results, "Visitantes únicos", :visitors),
-        top_stats_entry(current_results, prev_results, "Visitas Totais", :visits),
-        top_stats_entry(current_results, prev_results, "Visualizações de página", :pageviews),
-        top_stats_entry(current_results, prev_results, "Visualizações por visita", :views_per_visit),
-        top_stats_entry(current_results, prev_results, "Taxa de rejeição", :bounce_rate),
-        top_stats_entry(current_results, prev_results, "Duração da visita", :visit_duration),
-        top_stats_entry(current_results, prev_results, "Tempo na página", :time_on_page)
+        top_stats_entry(current_results, prev_results, "Unique visitors", :visitors),
+        top_stats_entry(current_results, prev_results, "Total visits", :visits),
+        top_stats_entry(current_results, prev_results, "Total pageviews", :pageviews),
+        top_stats_entry(current_results, prev_results, "Views per visit", :views_per_visit),
+        top_stats_entry(current_results, prev_results, "Bounce rate", :bounce_rate),
+        top_stats_entry(current_results, prev_results, "Visit duration", :visit_duration),
+        top_stats_entry(current_results, prev_results, "Time on page", :time_on_page)
       ]
       |> Enum.filter(& &1)
 
