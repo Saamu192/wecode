@@ -297,14 +297,14 @@ function DatePicker({query, site, history}) {
     opts.date = opts.date ? formatISO(opts.date) : false;
 
     const keybinds = {
-      'Hoje': 'D',
-      'Tempo Real': 'R',
-      'Últimos 7 dias': 'W',
-      'Último mês até hoje': 'M',
-      'Início do ano até hoje': 'Y',
-      'Últimos 12 meses': 'L',
-      'últimos 30 dias': 'T',
-      'Todo histórico': 'A',
+      'Today': 'D',
+      'Realtime': 'R',
+      'Last 7 days': 'W',
+      'Month to Date': 'M',
+      'Year to Date': 'Y',
+      'Last 12 months': 'L',
+      'Last 30 days': 'T',
+      'All time': 'A',
     };
 
     return (

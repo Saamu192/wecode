@@ -86,7 +86,7 @@ function ScreenSizes({ query, site }) {
     <ListReport
       fetchData={fetchData}
       filter={{ screen: 'name' }}
-      keyLabel="Screen size"
+      keyLabel="Tipo"
       query={query}
       renderIcon={renderIcon}
     />
