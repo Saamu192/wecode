@@ -1,25 +1,25 @@
 import numberFormatter, {durationFormatter} from '../../util/number-formatter'
 
 export const METRIC_MAPPING = {
-  'Unique visitors (last 30 min)': 'visitors',
-  'Pageviews (last 30 min)': 'pageviews',
-  'Unique visitors': 'visitors',
-  'Visit duration': 'visit_duration',
-  'Total pageviews': 'pageviews',
-  'Views per visit': 'views_per_visit',
-  'Total visits': 'visits',
-  'Bounce rate': 'bounce_rate',
-  'Unique conversions': 'conversions',
+  'Visitantes únicos (últimos 30 min)': 'visitors',
+  'Visualizações por página (últimos 30 min)': 'pageviews',
+  'Visitantes únicos': 'visitors',
+  'Duração da visita': 'visit_duration',
+  'Totais de visualizações': 'pageviews',
+  'Visualizações por visita': 'views_per_visit',
+  'Total de visitas': 'visits',
+  'Taxa de rejeição': 'bounce_rate',
+  'Conversões': 'conversions',
 }
 
 export const METRIC_LABELS = {
-  'visitors': 'Visitors',
-  'pageviews': 'Pageviews',
-  'views_per_visit': 'Views per Visit',
-  'visits': 'Visits',
-  'bounce_rate': 'Bounce Rate',
-  'visit_duration': 'Visit Duration',
-  'conversions': 'Converted Visitors',
+  'visitors': 'Visitantes',
+  'pageviews': 'Visualizações por página',
+  'views_per_visit': 'Visualizações por visita',
+  'visits': 'Total de visitas',
+  'bounce_rate': 'Taxa de rejeição',
+  'visit_duration': 'Duração da visita',
+  'conversions': 'Visitantes convertidos',
 }
 
 export const METRIC_FORMATTER = {
@@ -61,7 +61,7 @@ const buildDashedDataset = function(plot, presentIndex) {
   return [{
     data: dashedPlot,
     borderDash: [3, 3],
-    borderColor: 'rgba(101,116,205)',
+    borderColor: 'rgba(76,116,104)',
     pointHoverBackgroundColor: 'rgba(71, 87, 193)',
     yAxisID: 'y',
   }]

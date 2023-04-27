@@ -102,12 +102,12 @@ function DropdownContent({ history, site, query, wrapped }) {
   return (
     <>
       <div className="border-b border-gray-200 dark:border-gray-500 px-4 sm:py-2 py-3 text-sm leading-tight hover:text-indigo-700 dark:hover:text-indigo-500 hover:cursor-pointer" onClick={() => setAddingFilter(true)}>
-        + Add filter
+        + Adicione um filtro
       </div>
       {appliedFilters(query).map((filter) => renderDropdownFilter(site, history, filter, query))}
       <Menu.Item key="clear">
         <div className="border-t border-gray-200 dark:border-gray-500 px-4 sm:py-2 py-3 text-sm leading-tight hover:text-indigo-700 dark:hover:text-indigo-500 hover:cursor-pointer" onClick={() => clearAllFilters(history, query)}>
-          Clear All Filters
+          Limpar todos os filtros
         </div>
       </Menu.Item>
     </>
@@ -220,7 +220,7 @@ class Filters extends React.Component {
       return (
         <>
           <AdjustmentsVerticalIcon className="-ml-1 mr-1 h-4 w-4" aria-hidden="true" />
-          {filterCount} Filter{filterCount === 1 ? '' : 's'}
+          {filterCount} Filtro{filterCount === 1 ? '' : 's'}
         </>
       )
     }
@@ -229,7 +229,7 @@ class Filters extends React.Component {
       <>
         <MagnifyingGlassIcon className="-ml-1 mr-1 h-4 w-4 md:h-4 md:w-4" aria-hidden="true" />
         {/* This would have been a good use-case for JSX! But in the interest of keeping the breakpoint width logic with TailwindCSS, this is a better long-term way to deal with it. */}
-        <span className="sm:hidden">Filter</span><span className="hidden sm:inline-block">Filter</span>
+        <span className="sm:hidden">Filtro</span><span className="hidden sm:inline-block">Filtro</span>
       </>
     )
   }

@@ -1,15 +1,12 @@
 <div class="shadow bg-white dark:bg-gray-800 sm:rounded-md sm:overflow-hidden py-6 px-4 sm:p-6">
   <header class="relative">
-    <h2 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">Email reports</h2>
-    <p class="mt-1 text-sm leading-5 text-gray-500 dark:text-gray-200">Send weekly/monthly analytics reports to as many addresses as you wish</p>
-    <%= link(to: "https://plausible.io/docs/email-reports", target: "_blank", rel: "noferrer") do %>
-      <svg class="w-6 h-6 absolute top-0 right-0 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
-    <% end %>
+    <h2 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">Relatórios por Email</h2>
+    <p class="mt-1 text-sm leading-5 text-gray-500 dark:text-gray-200">Envie relatórios analíticos semanais/mensais para quantos endereços desejar</p>
   </header>
 
   <div class="my-8 flex items-center">
     <%= if @weekly_report do %>
-      <%= button(to: "/sites/#{URI.encode_www_form(@site.domain)}/weekly-report/disable", method: :post, class: "bg-indigo-600 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring") do %>
+      <%= button(to: "/sites/#{URI.encode_www_form(@site.domain)}/weekly-report/disable", method: :post, class: "bg-green-600 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring") do %>
         <span class="translate-x-5 inline-block h-5 w-5 rounded-full bg-white dark:bg-gray-800 shadow transform transition ease-in-out duration-200"></span>
       <% end %>
     <% else %>
@@ -17,11 +14,11 @@
         <span class="translate-x-0 inline-block h-5 w-5 rounded-full bg-white dark:bg-gray-800 shadow transform transition ease-in-out duration-200"></span>
       <% end %>
     <% end %>
-    <span class="ml-2 dark:text-gray-100">Send a weekly email report every Monday</span>
+    <span class="ml-2 dark:text-gray-100">Envie um relatório semanal por e-mail todas as segundas-feiras</span>
   </div>
   <%= if @weekly_report do %>
     <div class="text-sm text-gray-700 dark:text-gray-300 mt-6">
-      <h4 class="font-bold my-2 dark:text-gray-100">Weekly report recipients</h4>
+      <h4 class="font-bold my-2 dark:text-gray-100">Destinatários do relatório semanal</h4>
       <%= for recipient <- @weekly_report.recipients do %>
         <div class="p-2 pl-3 flex justify-between bg-gray-100 dark:bg-gray-900 rounded my-2 max-w-md">
           <span>
@@ -45,12 +42,12 @@
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
               </div>
-              <%= email_input f, :recipient, class: "focus:ring-indigo-500 dark:bg-gray-900 focus:border-indigo-500 block w-full rounded-none rounded-l-md pl-10 sm:text-sm border-gray-300 dark:border-gray-500 dark:placeholder-gray-400 dark:text-gray-100", placeholder: "recipient@example.com", required: "true" %>
+              <%= email_input f, :recipient, class: "focus:ring-green-600 dark:bg-gray-900 focus:border-green-600 block w-full rounded-none rounded-l-md pl-10 sm:text-sm border-gray-300 dark:border-gray-500 dark:placeholder-gray-400 dark:text-gray-100", placeholder: "recipient@example.com", required: "true" %>
             </div>
 
             <%= submit class: "-ml-px relative button rounded-l-none" do %>
               <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"></path></svg>
-              <span>Add recipient</span>
+              <span>Adicionar destinatário</span>
             <% end %>
           </div>
         </div>
@@ -60,7 +57,7 @@
   <div class="my-8 border-b border-gray-300 dark:border-gray-500"></div>
   <div class="my-8 flex items-center">
     <%= if @monthly_report do %>
-      <%= button(to: "/sites/#{URI.encode_www_form(@site.domain)}/monthly-report/disable", method: :post, class: "bg-indigo-600 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring") do %>
+      <%= button(to: "/sites/#{URI.encode_www_form(@site.domain)}/monthly-report/disable", method: :post, class: "bg-green-600 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring") do %>
         <span class="translate-x-5 inline-block h-5 w-5 rounded-full bg-white dark:bg-gray-800 shadow transform transition ease-in-out duration-200"></span>
       <% end %>
     <% else %>
@@ -68,11 +65,11 @@
 				<span class="translate-x-0 inline-block h-5 w-5 rounded-full bg-white dark:bg-gray-800 shadow transform transition ease-in-out duration-200"></span>
       <% end %>
     <% end %>
-    <span class="ml-2 dark:text-gray-100">Send a monthly email report on 1st of the month</span>
+    <span class="ml-2 dark:text-gray-100">Envie um relatório mensal por e-mail no primeiro dia do mês</span>
   </div>
   <%= if @monthly_report do %>
     <div class="text-sm text-gray-700 dark:text-gray-300 mt-6">
-      <h4 class="font-bold my-2">Monthly report recipients</h4>
+      <h4 class="font-bold my-2">Destinatários do relatório mensal</h4>
       <%= for recipient <- @monthly_report.recipients do %>
         <div class="p-2 pl-3 flex justify-between bg-gray-100 dark:bg-gray-900 rounded my-2 max-w-md">
           <span>
@@ -96,12 +93,12 @@
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
               </div>
-              <%= email_input f, :recipient, class: "focus:ring-indigo-500 dark:bg-gray-900 focus:border-indigo-500 block w-full rounded-none rounded-l-md pl-10 sm:text-sm border-gray-300 dark:border-gray-500 dark:placeholder-gray-400 dark:text-gray-100", placeholder: "recipient@example.com", required: "true" %>
+              <%= email_input f, :recipient, class: "focus:ring-green-600 dark:bg-gray-900 focus:border-green-600 block w-full rounded-none rounded-l-md pl-10 sm:text-sm border-gray-300 dark:border-gray-500 dark:placeholder-gray-400 dark:text-gray-100", placeholder: "recipient@example.com", required: "true" %>
             </div>
 
             <%= submit class: "-ml-px relative button rounded-l-none" do %>
               <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"></path></svg>
-              <span>Add recipient</span>
+              <span>Adicionar destinatário</span>
             <% end %>
           </div>
         </div>
@@ -112,16 +109,13 @@
 
 <div class="shadow bg-white dark:bg-gray-800 sm:rounded-md sm:overflow-hidden py-6 px-4 sm:p-6">
   <header class="relative">
-    <h2 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">Traffic spike notifications</h2>
-    <p class="mt-1 text-sm leading-5 text-gray-500 dark:text-gray-200">Get notified when your site has unusually high number of current visitors</p>
-    <%= link(to: "https://plausible.io/docs/traffic-spikes", target: "_blank", rel: "noreferrer") do %>
-      <svg class="w-6 h-6 absolute top-0 right-0 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
-    <% end %>
+    <h2 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">Notificações de pico de tráfego</h2>
+    <p class="mt-1 text-sm leading-5 text-gray-500 dark:text-gray-200">Seja notificado quando seu site tiver um número excepcionalmente alto de visitantes atuais</p>
   </header>
 
   <div class="my-8 flex items-center">
     <%= if @spike_notification do %>
-      <%= button(to: "/sites/#{URI.encode_www_form(@site.domain)}/spike-notification/disable", method: :post, class: "bg-indigo-600 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring") do %>
+      <%= button(to: "/sites/#{URI.encode_www_form(@site.domain)}/spike-notification/disable", method: :post, class: "bg-green-600 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring") do %>
         <span class="translate-x-5 inline-block h-5 w-5 rounded-full bg-white dark:bg-gray-800 shadow transform transition ease-in-out duration-200"></span>
       <% end %>
     <% else %>
@@ -129,7 +123,7 @@
 				<span class="translate-x-0 inline-block h-5 w-5 rounded-full bg-white dark:bg-gray-800 shadow transform transition ease-in-out duration-200"></span>
       <% end %>
     <% end %>
-    <span class="ml-2 dark:text-gray-100">Send notifications of traffic spikes</span>
+    <span class="ml-2 dark:text-gray-100">Enviar notificações de picos de tráfego</span>
   </div>
 
   <%= if @spike_notification do %>
@@ -145,14 +139,14 @@
                 <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
               </svg>
             </div>
-            <%= number_input f, :threshold, class: "focus:ring-indigo-500 dark:bg-gray-900 focus:border-indigo-500 block w-full rounded-none rounded-l-md pl-10 sm:text-sm border-gray-300 dark:border-gray-500 dark:text-gray-100" %>
+            <%= number_input f, :threshold, class: "focus:ring-green-600 dark:bg-gray-900 focus:border-green-600 block w-full rounded-none rounded-l-md pl-10 sm:text-sm border-gray-300 dark:border-gray-500 dark:text-gray-100" %>
           </div>
           <button class="-ml-px relative button rounded-l-none">
-            <span>Save threshold</span>
+            <span>Salvar limite</span>
           </button>
         </div>
     <% end %>
-      <h4 class="font-bold mt-6 dark:text-gray-100">Notification recipients</h4>
+      <h4 class="font-bold mt-6 dark:text-gray-100">Destinatários da notificação</h4>
       <%= for recipient <- @spike_notification.recipients do %>
         <div class="p-2 pl-3 flex justify-between bg-gray-100 dark:bg-gray-900 rounded my-2 max-w-md">
           <span>
@@ -176,12 +170,12 @@
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
               </div>
-              <%= email_input f, :recipient, class: "focus:ring-indigo-500 dark:bg-gray-900 focus:border-indigo-500 block w-full rounded-none rounded-l-md pl-10 sm:text-sm border-gray-300 dark:border-gray-500 dark:placeholder-gray-400 dark:text-gray-100", placeholder: "recipient@example.com", required: "true" %>
+              <%= email_input f, :recipient, class: "focus:ring-green-600 dark:bg-gray-900 focus:border-green-600 block w-full rounded-none rounded-l-md pl-10 sm:text-sm border-gray-300 dark:border-gray-500 dark:placeholder-gray-400 dark:text-gray-100", placeholder: "recipient@example.com", required: "true" %>
             </div>
 
             <%= submit class: "-ml-px relative button rounded-l-none" do %>
               <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"></path></svg>
-              <span>Add recipient</span>
+              <span>Adicionar Destinatário</span>
             <% end %>
           </div>
         </div>

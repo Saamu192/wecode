@@ -1,15 +1,15 @@
 <%= if @success do %>
-  Your Google Analytics import has completed successfully. The Plausible dashboard for <%= @site.domain %> now contains historical imported data from <%= date_format(@site.imported_data.start_date) %> to <%= date_format(@site.imported_data.end_date) %>
+  Sua importação do Google Analytics foi concluída com sucesso. O painel Context para <%= @site.domain %> agora contém dados históricos importados de <%= date_format(@site.imported_data.start_date) %> para <%= date_format(@site.imported_data.end_date) %>
 <br /><br />
-<%= link("Click here", to: @link) %> to view your dashboard.
+<%= link("Clique aqui", to: @link) %> para visualizar sua dashboard.
 <% else %>
-  Unfortunately, your Google Analytics import for <%= @site.domain %> did not complete successfully. Sorry about that!
+ Infelizmente, sua importação do Google Analytics para <%= @site.domain %> não foi concluído com sucesso. Desculpe por isso!
   <br /> <br />
 
-  This may be due to the user metric setting in your Google Analytics account. We found that changing the user metric setting is necessary to get the correct data out of the Google API.
+ Isso pode ocorrer devido à configuração da métrica do usuário em sua conta do Google Analytics. Descobrimos que é necessário alterar a configuração da métrica do usuário para obter os dados corretos da API do Google.
   <br /> <br />
 
-  Please log into your Google Analytics account and go to Admin -> Property Settings -> User Analysis. Then make sure that "Enable User Metric in Reporting" is set to OFF. Then try importing again. You can switch the setting back after the import.
+  Faça login na sua conta do Google Analytics e vá para Admin -> Configurações da propriedade -> Análise do usuário. Em seguida, certifique-se de que "Ativar métrica do usuário nos relatórios" esteja definido como DESATIVADO. Em seguida, tente importar novamente. Você pode mudar a configuração de volta após a importação.
   <br /> <br />
 
   If you've already changed that setting, then it is something else:

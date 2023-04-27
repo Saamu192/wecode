@@ -197,7 +197,7 @@ class RegularFilterModal extends React.Component {
 
     return (
       <>
-        <h1 className="text-xl font-bold dark:text-gray-100">Filter by {formatFilterGroup(filterGroup)}</h1>
+        <h1 className="text-xl font-bold dark:text-gray-100">Filtrar por {formatFilterGroup(filterGroup)}</h1>
 
         <div className="mt-4 border-b border-gray-300"></div>
         <main className="modal__content">
@@ -210,7 +210,7 @@ class RegularFilterModal extends React.Component {
                 className="button"
                 disabled={this.isDisabled()}
               >
-                Apply Filter
+                Aplicar filtro
               </button>
 
               {showClear && (

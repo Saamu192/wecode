@@ -148,7 +148,7 @@ export default class Locations extends React.Component {
     if (isActive) {
       return (
         <button
-          className="inline-block h-5 text-indigo-700 dark:text-indigo-500 font-bold active-prop-heading"
+          className="inline-block h-5 text-green-600 dark:text-green-600 font-bold active-prop-heading"
         >
           {name}
         </button>
@@ -157,7 +157,7 @@ export default class Locations extends React.Component {
 
     return (
       <button
-        className="hover:text-indigo-600 cursor-pointer"
+        className="hover:text-green-200 cursor-pointer"
         onClick={this.setMode(mode)}
       >
         {name}

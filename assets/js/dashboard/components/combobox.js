@@ -198,7 +198,7 @@ export default function PlausibleCombobox(props) {
           )}
           { matchesFound && (
             visibleOptions.map((option, i) => {
-              const text = option.freeChoice ? `Filter by '${option.label}'` : option.label
+              const text = option.freeChoice ? `Filtrar por '${option.label}'` : option.label
 
               return (
                 <Option

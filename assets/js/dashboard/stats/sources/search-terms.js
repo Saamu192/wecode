@@ -72,8 +72,8 @@ export default class SearchTerms extends React.Component {
       return (
         <div className="text-center text-gray-700 dark:text-gray-300 text-sm mt-20">
           <RocketIcon />
-          <div>Sorry, we cannot show which keywords converted best for goal <b>{this.props.query.filters.goal}</b></div>
-          <div>Google does not share this information</div>
+          <div>Desculpe, não podemos mostrar quais palavras-chave converteram melhor para meta <b>{this.props.query.filters.goal}</b></div>
+          <div>O Google não compartilha essas informações</div>
         </div>
       )
 
@@ -82,19 +82,19 @@ export default class SearchTerms extends React.Component {
         <div className="text-center text-gray-700 dark:text-gray-300 text-sm mt-20">
           <RocketIcon />
           <div>
-          This site is not connected to Search Console so we cannot show the search phrases.
-          {this.state.isAdmin && this.state.error && <><br/><br/><p>Please click below to connect your Search Console account.</p></>}
+          Este site não está conectado ao Search Console, por isso não podemos mostrar as frases de pesquisa.
+          {this.state.isAdmin && this.state.error && <><br/><br/><p>Clique abaixo para conectar sua conta do Search Console.</p></>}
           </div>
-          {this.state.isAdmin && <a href={`/${encodeURIComponent(this.props.site.domain)}/settings/search-console`} className="button mt-4">Connect with Google</a> }
+          {this.state.isAdmin && <a href={`/${encodeURIComponent(this.props.site.domain)}/settings/search-console`} className="button mt-4">Conecte-se com o Google</a> }
         </div>
       )
     } else if (this.state.searchTerms.length > 0) {
-      const valLabel = this.props.query.period === 'realtime' ? 'Current visitors' : 'Visitors'
+      const valLabel = this.props.query.period === 'realtime' ? 'Visitantes Atuais' : 'Visitantes'
 
       return (
         <React.Fragment>
           <div className="flex items-center mt-3 mb-2 justify-between text-gray-500 dark:text-gray-400 text-xs font-bold tracking-wide">
-            <span>Search term</span>
+            <span>Termo de pesquisa</span>
             <span>{valLabel}</span>
           </div>
 
@@ -105,9 +105,8 @@ export default class SearchTerms extends React.Component {
       return (
         <div className="text-center text-gray-700 dark:text-gray-300 text-sm mt-20">
           <RocketIcon />
-          <div>Could not find any search terms for this period</div>
-          <div>Google Search Console data is sampled and delayed by 24-36h</div>
-          <div>Read more on <a href="https://plausible.io/docs/google-search-console-integration#i-dont-see-google-search-query-data-in-my-dashboard" target="_blank" rel="noreferrer" className="hover:underline text-indigo-700 dark:text-indigo-500">our documentation</a></div>
+          <div>Não foi possível encontrar nenhum termo de pesquisa para este período</div>
+          <div>Os dados do Google Search Console são exibidos atrasados em 24-36h</div>
         </div>
       )
     }

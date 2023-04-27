@@ -1,8 +1,8 @@
 defmodule Plausible.Themes do
   @options [
-    [key: "Follow System Theme", value: "system"],
-    [key: "Light", value: "light"],
-    [key: "Dark", value: "dark"]
+    [key: "Siga o tema do sistema", value: "system"],
+    [key: "Branco", value: "light"],
+    [key: "Escuro", value: "dark"]
   ]
 
   def options() do

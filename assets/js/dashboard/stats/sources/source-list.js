@@ -81,14 +81,14 @@ class AllSources extends React.Component {
 
   label() {
     if (this.props.query.period === 'realtime') {
-      return 'Current visitors'
+      return 'Visitantes Atuais'
     }
 
     if (this.showConversionRate()) {
-      return 'Conversions'
+      return 'Conversões'
     }
 
-    return 'Visitors'
+    return 'Visitantes'
   }
 
   renderList() {
@@ -118,7 +118,7 @@ class AllSources extends React.Component {
     return (
       <LazyLoader className="flex flex-col flex-grow" onVisible={this.onVisible}>
         <div id="sources" className="flex justify-between w-full">
-          <h3 className="font-bold dark:text-gray-100">Top Sources</h3>
+          <h3 className="font-bold dark:text-gray-100">Principais Fontes</h3>
           {this.props.renderTabs()}
         </div>
         {this.state.loading && <div className="mx-auto loading mt-44"><div></div></div>}
@@ -141,11 +141,11 @@ class AllSources extends React.Component {
 }
 
 const UTM_TAGS = {
-  utm_medium: { label: 'UTM Medium', shortLabel: 'UTM Medium', endpoint: 'utm_mediums' },
-  utm_source: { label: 'UTM Source', shortLabel: 'UTM Source', endpoint: 'utm_sources' },
-  utm_campaign: { label: 'UTM Campaign', shortLabel: 'UTM Campai', endpoint: 'utm_campaigns' },
-  utm_content: { label: 'UTM Content', shortLabel: 'UTM Conten', endpoint: 'utm_contents' },
-  utm_term: { label: 'UTM Term', shortLabel: 'UTM Term', endpoint: 'utm_terms' },
+  utm_medium: { label: 'Mídias UTM', shortLabel: 'Mídias UTM', endpoint: 'utm_mediums' },
+  utm_source: { label: 'Fontes UTM', shortLabel: 'Fontes UTM', endpoint: 'utm_sources' },
+  utm_campaign: { label: 'Campanhas UTM', shortLabel: 'Campanhas UTM', endpoint: 'utm_campaigns' },
+  utm_content: { label: 'Cnteúdo UTM', shortLabel: 'Cont UTM', endpoint: 'utm_contents' },
+  utm_term: { label: 'Termos UTM', shortLabel: 'Termos UTM', endpoint: 'utm_terms' },
 }
 
 class UTMSources extends React.Component {
@@ -220,14 +220,14 @@ class UTMSources extends React.Component {
 
   label() {
     if (this.props.query.period === 'realtime') {
-      return 'Current visitors'
+      return 'Visitantes atuais'
     }
 
     if (this.showConversionRate()) {
-      return 'Conversions'
+      return 'Conversão'
     }
 
-    return 'Visitors'
+    return 'Visitantes'
   }
 
   renderList() {
@@ -249,7 +249,7 @@ class UTMSources extends React.Component {
         </div>
       )
     } else {
-      return <div className="font-medium text-center text-gray-500 mt-44 dark:text-gray-400">No data yet</div>
+      return <div className="font-medium text-center text-gray-500 mt-44 dark:text-gray-400">Sem dados no momento</div>
     }
   }
 
@@ -257,7 +257,7 @@ class UTMSources extends React.Component {
     return (
       <LazyLoader onVisible={this.onVisible}>
         <div className="flex justify-between w-full">
-          <h3 className="font-bold dark:text-gray-100">Top Sources</h3>
+          <h3 className="font-bold dark:text-gray-100">Fontes Principais</h3>
           {this.props.renderTabs()}
         </div>
         {this.state.loading && <div className="mx-auto loading mt-44"><div></div></div>}
@@ -302,14 +302,14 @@ export default class SourceList extends React.Component {
   }
 
   renderTabs() {
-    const activeClass = 'inline-block h-5 text-indigo-700 dark:text-indigo-500 font-bold active-prop-heading truncate text-left'
-    const defaultClass = 'hover:text-indigo-600 cursor-pointer truncate text-left'
+    const activeClass = 'inline-block h-5 text-green-600 dark:text-green-500 font-bold active-prop-heading truncate text-left'
+    const defaultClass = 'hover:text-green-400 cursor-pointer truncate text-left'
     const dropdownOptions = Object.keys(UTM_TAGS)
-    let buttonText = UTM_TAGS[this.state.tab] ? UTM_TAGS[this.state.tab].label : 'Campaigns'
+    let buttonText = UTM_TAGS[this.state.tab] ? UTM_TAGS[this.state.tab].label : 'Campanhas'
 
     return (
       <div className="flex text-xs font-medium text-gray-500 dark:text-gray-400 space-x-2">
-        <div className={this.state.tab === 'all' ? activeClass : defaultClass} onClick={this.setTab('all')}>All</div>
+        <div className={this.state.tab === 'all' ? activeClass : defaultClass} onClick={this.setTab('all')}>Tudo</div>
 
         <Menu as="div" className="relative inline-block text-left">
           <div>

@@ -7,12 +7,12 @@ import numberFormatter, { durationFormatter } from '../../util/number-formatter'
 import { parseQuery } from '../../query'
 
 const TITLES = {
-  sources: 'Top Sources',
-  utm_mediums: 'Top UTM mediums',
-  utm_sources: 'Top UTM sources',
-  utm_campaigns: 'Top UTM campaigns',
-  utm_contents: 'Top UTM contents',
-  utm_terms: 'Top UTM Terms'
+  sources: 'Principais Fontes',
+  utm_mediums: 'Principais mídias UTM',
+  utm_sources: 'Principais fontes UTM',
+  utm_campaigns: 'Principais campanhas UTM',
+  utm_contents: 'Principais conteúdos UTM',
+  utm_terms: 'Principais termos UTM'
 }
 
 class SourcesModal extends React.Component {
@@ -156,12 +156,12 @@ class SourcesModal extends React.Component {
           <table className="w-max overflow-x-auto md:w-full table-striped table-fixed">
             <thead>
               <tr>
-                <th className="p-2 w-48 md:w-56 lg:w-1/3 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="left">Source</th>
-                {this.showConversionRate() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">Total visitors</th>}
+                <th className="p-2 w-48 md:w-56 lg:w-1/3 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="left">Fonte</th>
+                {this.showConversionRate() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">Visitantes totais</th>}
                 <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">{this.label()}</th>
-                {this.showExtra() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">Bounce rate</th>}
-                {this.showExtra() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">Visit duration</th>}
-                {this.showConversionRate() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">CR</th>}
+                {this.showExtra() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">Taxa de rejeição</th>}
+                {this.showExtra() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">Duração da visita</th>}
+                {this.showConversionRate() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">CV</th>}
               </tr>
             </thead>
             <tbody>

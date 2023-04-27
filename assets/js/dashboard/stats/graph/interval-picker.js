@@ -6,11 +6,11 @@ import * as storage from '../../util/storage'
 import { isKeyPressed } from '../../keybinding.js'
 
 export const INTERVAL_LABELS = {
-  'minute': 'Minutes',
-  'hour': 'Hours',
-  'date': 'Days',
-  'week': 'Weeks',
-  'month': 'Months'
+  'minute': 'Minutos',
+  'hour': 'Horas',
+  'date': 'Dias',
+  'week': 'Semanas',
+  'month': 'Meses'
 }
 
 export const getStoredInterval = function(period, domain) {

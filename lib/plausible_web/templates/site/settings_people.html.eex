@@ -1,10 +1,7 @@
 <div class="shadow bg-white dark:bg-gray-800 sm:rounded-md py-6 px-4 sm:p-6">
   <header class="relative">
-    <h2 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">People</h2>
-    <p class="mt-1 text-sm leading-5 text-gray-500 dark:text-gray-200">Invite your friends or coworkers</p>
-    <%= link(to: "https://plausible.io/docs/users-roles", target: "_blank", rel: "noreferrer") do %>
-      <svg class="w-6 h-6 absolute top-0 right-0 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
-    <% end %>
+    <h2 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">Pessoas</h2>
+    <p class="mt-1 text-sm leading-5 text-gray-500 dark:text-gray-200">Convide amigos ou colegas de trabalho</p>
   </header>
   <div class="flow-root mt-6">
     <ul class="-my-5 divide-y divide-gray-200 dark:divide-gray-400">
@@ -38,8 +35,8 @@
                 <%= if membership.role == :owner do %>
                   <li class="p-4 text-sm cursor-default group flex justify-between" role="option">
                     <div>
-                      <p class="text-base font-medium text-gray-900 dark:text-gray-100">Owner</p>
-                      <p class="mt-1 text-sm text-gray-500">Site owner cannot be assigned to any other role</p>
+                      <p class="text-base font-medium text-gray-900 dark:text-gray-100">Proprietário</p>
+                      <p class="mt-1 text-sm text-gray-500">O proprietário do site não pode ser atribuído a nenhuma outra função</p>
                     </div>
 
                     <span class="text-indigo-500">
@@ -57,7 +54,7 @@
                   <%= link(to: Routes.membership_path(@conn, :update_role, @site.domain, membership.id, "admin"), method: :put, class: "p-4 flex justify-between text-sm group hover:bg-indigo-500") do %>
                     <div>
                       <p class="text-base font-medium text-gray-900 dark:text-gray-100 group-hover:text-white">Admin</p>
-                      <p class="mt-1 text-sm text-gray-500 dark:text-gray-300 group-hover:text-gray-100 dark:group-hover:text-white">View stats and edit site settings</p>
+                      <p class="mt-1 text-sm text-gray-500 dark:text-gray-300 group-hover:text-gray-100 dark:group-hover:text-white">Ver estatísticas e editar configurações do site</p>
                     </div>
 
                     <%= if membership.role == :admin do %>
@@ -70,8 +67,8 @@
                   <% end %>
                   <%= link(to: Routes.membership_path(@conn, :update_role, @site.domain, membership.id, "viewer"), method: :put, class: "p-4 flex justify-between text-sm group hover:bg-indigo-500") do %>
                     <div>
-                      <p class="text-base font-medium text-gray-900 dark:text-gray-100 group-hover:text-white">Viewer</p>
-                      <p class="mt-1 text-sm text-gray-500 dark:text-gray-300 group-hover:text-gray-100 dark:group-hover:text-white">View stats only</p>
+                      <p class="text-base font-medium text-gray-900 dark:text-gray-100 group-hover:text-white">Visualizador</p>
+                      <p class="mt-1 text-sm text-gray-500 dark:text-gray-300 group-hover:text-gray-100 dark:group-hover:text-white">Ver apenas estatísticas</p>
                     </div>
 
                     <%= if membership.role == :viewer do %>
@@ -84,7 +81,7 @@
                   <% end %>
 
                   <%= link(to: Routes.membership_path(@conn, :remove_member, @site.domain, membership.id), method: :delete, class: "p-4 flex hover:bg-gray-100 hover:bg-gray-900 text-red-600") do %>
-                    <p class="text-sm text-red-600 font-medium">Remove member</p>
+                    <p class="text-sm text-red-600 font-medium">Remover membro</p>
                   <% end %>
                 <% end %>
               </ul>
@@ -142,7 +139,7 @@
   <div class="mt-8">
     <%= link(to: Routes.membership_path(@conn, :invite_member_form, @site.domain), class: "button") do %>
       <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"></path></svg>
-      Invite
+      Convidar
     <% end %>
   </div>
 </div>

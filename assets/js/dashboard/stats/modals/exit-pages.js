@@ -52,14 +52,14 @@ class ExitPagesModal extends React.Component {
 
   label() {
     if (this.state.query.period === 'realtime') {
-      return 'Current visitors'
+      return 'Visitantes Atuais'
     }
 
     if (this.showConversionRate()) {
-      return 'Conversions'
+      return 'Conversões'
     }
 
-    return 'Visitors'
+    return 'Visitantes'
   }
 
   renderPage(page) {
@@ -87,7 +87,7 @@ class ExitPagesModal extends React.Component {
       return (
         <div className="w-full text-center my-4">
           <button onClick={this.loadMore.bind(this)} type="button" className="button">
-            Load more
+            Carregar mais
           </button>
         </div>
       )
@@ -98,19 +98,19 @@ class ExitPagesModal extends React.Component {
     if (this.state.pages) {
       return (
         <React.Fragment>
-          <h1 className="text-xl font-bold dark:text-gray-100">Exit Pages</h1>
+          <h1 className="text-xl font-bold dark:text-gray-100">Páginas de Saída</h1>
 
           <div className="my-4 border-b border-gray-300"></div>
           <main className="modal__content">
             <table className="w-max overflow-x-auto md:w-full table-striped table-fixed">
               <thead>
                 <tr>
-                  <th className="p-2 w-48 md:w-56 lg:w-1/3 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="left">Page url</th>
-                  {this.showConversionRate() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right" >Total Visitors </th>}
+                  <th className="p-2 w-48 md:w-56 lg:w-1/3 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="left">URL da Página</th>
+                  {this.showConversionRate() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right" >Visitantes Totais </th>}
                   <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">{this.label()}</th>
-                  {this.showExtra() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">Total Exits</th>}
-                  {this.showExtra() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">Exit Rate</th>}
-                  {this.showConversionRate() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">CR</th>}
+                  {this.showExtra() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">Saídas Totais</th>}
+                  {this.showExtra() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">Taxa de Saída</th>}
+                  {this.showConversionRate() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">CV</th>}
                 </tr>
               </thead>
               <tbody>

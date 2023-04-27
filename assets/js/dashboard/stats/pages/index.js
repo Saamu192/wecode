@@ -66,7 +66,7 @@ function TopPages({query, site}) {
     <ListReport
       fetchData={fetchData}
       filter={{page: 'name'}}
-      keyLabel="Page"
+      keyLabel="Página"
       detailsLink={url.sitePath(site, '/pages')}
       query={query}
       externalLinkDest={externalLinkDest}
@@ -76,9 +76,9 @@ function TopPages({query, site}) {
 }
 
 const labelFor = {
-	'pages': 'Top Pages',
-	'entry-pages': 'Entry Pages',
-	'exit-pages': 'Exit Pages',
+	'pages': 'Páginas Principais',
+	'entry-pages': 'Páginas de Entrada',
+	'exit-pages': 'Páginas de Saída',
 }
 
 export default class Pages extends React.Component {
@@ -117,7 +117,7 @@ export default class Pages extends React.Component {
     if (isActive) {
       return (
         <button
-          className="inline-block h-5 text-indigo-700 dark:text-indigo-500 font-bold active-prop-heading"
+          className="inline-block h-5 text-green-600 dark:text-green-600 font-bold active-prop-heading"
         >
           {name}
         </button>
@@ -126,7 +126,7 @@ export default class Pages extends React.Component {
 
     return (
       <button
-        className="hover:text-indigo-600 cursor-pointer"
+        className="hover:text-green-200 cursor-pointer"
         onClick={this.setMode(mode)}
       >
         {name}
@@ -148,9 +148,9 @@ export default class Pages extends React.Component {
               {labelFor[this.state.mode] || 'Page Visits'}
             </h3>
             <div className="flex font-medium text-xs text-gray-500 dark:text-gray-400 space-x-2">
-              { this.renderPill('Top Pages', 'pages') }
-              { this.renderPill('Entry Pages', 'entry-pages') }
-              { this.renderPill('Exit Pages', 'exit-pages') }
+              { this.renderPill('Principais Páginas', 'pages') }
+              { this.renderPill('Páginas de Entrada', 'entry-pages') }
+              { this.renderPill('Páginas de Saída', 'exit-pages') }
             </div>
           </div>
           {/* Main Contents */}

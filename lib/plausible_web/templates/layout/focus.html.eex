@@ -11,7 +11,7 @@
     <%= render("_tracking.html", assigns) %>
     <script type="text/javascript" data-pref="<%= @conn.assigns[:current_user] && @conn.assigns[:current_user].theme %>" src="<%= Routes.static_path(@conn, "/js/applyTheme.js") %>"></script>
   </head>
-  <body class="flex flex-col h-full bg-white-100 dark:bg-white-100">
+  <body class="flex flex-col h-full bg-gray-100 dark:bg-gray-900">
     <div class="w-full my-8 text-center">
         <a href="<%= home_dest(@conn) %>">
           <%= img_tag(PlausibleWeb.Router.Helpers.static_path(@conn, "/images/icon/plausible_logo_dark.png"), class: "hidden dark:inline", style: "height: 2.5rem;", alt: "Plausible logo") %>

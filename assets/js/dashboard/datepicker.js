@@ -297,14 +297,14 @@ function DatePicker({query, site, history}) {
     opts.date = opts.date ? formatISO(opts.date) : false;
 
     const keybinds = {
-      'Today': 'D',
-      'Realtime': 'R',
-      'Last 7 days': 'W',
-      'Month to Date': 'M',
-      'Year to Date': 'Y',
-      'Last 12 months': 'L',
-      'Last 30 days': 'T',
-      'All time': 'A',
+      'Hoje': 'D',
+      'Tempo real': 'R',
+      'Últimos 7 dias': 'W',
+      'Início do mês a data atual': 'M',
+      'Início do ano a data atual': 'Y',
+      'Últimos 12 meses': 'L',
+      'Últimos 30 dias': 'T',
+      'Histórico completo': 'A',
     };
 
     return (
@@ -333,23 +333,23 @@ function DatePicker({query, site, history}) {
             font-medium text-gray-800 dark:text-gray-200 date-options"
           >
             <div className="py-1 border-b border-gray-200 dark:border-gray-500 date-option-group">
-              {renderLink("day", "Today")}
-              {renderLink("realtime", "Realtime")}
+              {renderLink("day", "Hoje")}
+              {renderLink("realtime", "Tempo real")}
             </div>
             <div className="py-1 border-b border-gray-200 dark:border-gray-500 date-option-group">
-              {renderLink("7d", "Last 7 days")}
-              {renderLink("30d", "Last 30 days")}
+              {renderLink("7d", "Últimos 7 dias")}
+              {renderLink("30d", "últimos 30 dias")}
             </div>
             <div className="py-1 border-b border-gray-200 dark:border-gray-500 date-option-group">
-              { renderLink('month', 'Month to Date') }
-              { renderLink('month', 'Last month', {date: lastMonth(site)}) }
+              { renderLink('month', 'Início do mês a data atual') }
+              { renderLink('month', 'Último mês', {date: lastMonth(site)}) }
             </div>
             <div className="py-1 border-b border-gray-200 dark:border-gray-500 date-option-group">
-              {renderLink("year", "Year to Date")}
-              {renderLink("12mo", "Last 12 months")}
+              {renderLink("year", "Início do ano a data atual")}
+              {renderLink("12mo", "Últimos 12 meses")}
             </div>
             <div className="py-1 date-option-group">
-              {renderLink("all", "All time")}
+              {renderLink("all", "Histórico completo")}
               <span
                 onClick={() => setMode('calendar')}
                 onKeyPress={() => setMode('calendar')}
@@ -362,7 +362,7 @@ function DatePicker({query, site, history}) {
                 aria-expanded="false"
                 aria-controls="calendar"
               >
-                Custom range
+                Intervalo personalizado
                 <span className='font-normal'>C</span>
               </span>
             </div>
@@ -382,7 +382,7 @@ function DatePicker({query, site, history}) {
         </div>
       );
     } if (mode === "calendar") {
-      return (
+      return ( 
         <div className="h-0">
           <Flatpickr
             id="calendar"

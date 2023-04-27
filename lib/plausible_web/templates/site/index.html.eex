@@ -25,14 +25,14 @@
 
   <div class="mt-6 pb-5 border-b border-gray-200 dark:border-gray-500 flex items-center justify-between">
     <h2 class="text-2xl font-bold leading-7 text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-9 sm:truncate flex-shrink-0">
-      My sites
+      Meus sites
     </h2>
-    <a href="/sites/new" class="button my-2 sm:my-0 w-auto">+ Add a website</a>
+    <a href="/sites/new" class="button my-2 sm:my-0 w-auto">+ Adicione um site</a>
   </div>
 
   <ul class="my-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
     <%= if Enum.empty?(@sites ++ @invitations) do %>
-      <p class="dark:text-gray-100">You don't have any sites yet</p>
+      <p class="dark:text-gray-100">Você ainda não tem nenhum site</p>
     <% end %>
 
     <%= for invitation <- @invitations do %>
@@ -45,13 +45,13 @@
             </div>
 
             <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
-              Pending invitation
+              Convite pendente
             </span>
           </div>
           <div class="pl-8 mt-2 flex items-center justify-between">
             <span class="text-gray-600 dark:text-gray-400 text-sm truncate">
               <span class="text-gray-800 dark:text-gray-200">
-                <b><%= PlausibleWeb.StatsView.large_number_format(Map.get(@visitors, invitation.site.domain, 0)) %></b> visitor<%= if Map.get(@visitors, invitation.site.domain, 0) != 1 do %>s<% end %> in last 24h
+                <b><%= PlausibleWeb.StatsView.large_number_format(Map.get(@visitors, invitation.site.domain, 0)) %></b> visitante<%= if Map.get(@visitors, invitation.site.domain, 0) != 1 do %>s<% end %> nas últimas 24h
               </span>
             </span>
           </div>
@@ -72,7 +72,7 @@
             <div class="pl-8 mt-2 flex items-center justify-between">
               <span class="text-gray-600 dark:text-gray-400 text-sm truncate">
                 <span class="text-gray-800 dark:text-gray-200">
-                  <b><%= PlausibleWeb.StatsView.large_number_format(Map.get(@visitors, site.domain, 0)) %></b> visitor<%= if Map.get(@visitors, site.domain, 0) != 1 do %>s<% end %> in last 24h
+                  <b><%= PlausibleWeb.StatsView.large_number_format(Map.get(@visitors, site.domain, 0)) %></b> visitante<%= if Map.get(@visitors, site.domain, 0) != 1 do %>s<% end %> nas últimas 24h
                 </span>
               </span>
             </div>

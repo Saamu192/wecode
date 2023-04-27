@@ -13,11 +13,18 @@
   <%= form_for @changeset, "/register", [class: "w-full max-w-md mx-auto bg-white dark:bg-gray-800 shadow-md rounded px-8 py-6 mb-4 mt-8", id: "register-form"], fn f -> %>
     <h2 class="text-xl font-black dark:text-gray-700">Preencha seus dados</h2>
     <div class="my-4">
-      <%= label f, :name, "Empresa", class: "block text-sm font-medium text-gray-700 dark:text-gray-300" %>
+      <%= label f, :name, "Nome Completo", class: "block text-sm font-medium text-gray-700 dark:text-gray-300" %>
       <div class="mt-1">
         <%= text_input f, :name, class: "dark:bg-gray-900 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 dark:border-gray-500 rounded-md dark:text-gray-300", placeholder: "Jane Doe" %>
       </div>
       <%= error_tag f, :name %>
+    </div>
+    <div class="my-4">
+      <%= label f, :company, "Empresa", class: "block text-sm font-medium text-gray-700 dark:text-gray-300" %>
+      <div class="mt-1">
+        <%= text_input f, :company, class: "dark:bg-gray-900 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 dark:border-gray-500 rounded-md dark:text-gray-300", placeholder: "Empresa Exemplo LTDA" %>
+      </div>
+      <%= error_tag f, :company %>
     </div>
     <div class="my-4">
       <div class="flex justify-between">
@@ -30,9 +37,9 @@
       <%= error_tag f, :email %>
     </div>
      <div class="my-4">
-      <%= label f, :phone, "Telefone", class: "block text-sm font-medium text-gray-700 dark:text-gray-300" %>
+      <%= label f, :phone, "Telefone (WhatsApp)", class: "block text-sm font-medium text-gray-700 dark:text-gray-300" %>
       <div class="mt-1">
-        <%= text_input f, :phone, class: "dark:bg-gray-900 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 dark:border-gray-500 rounded-md dark:text-gray-300", placeholder: "Jane Doe" %>
+        <%= text_input f, :phone, class: "dark:bg-gray-900 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 dark:border-gray-500 rounded-md dark:text-gray-300" %>
       </div>
       <%= error_tag f, :phone %>
     </div>

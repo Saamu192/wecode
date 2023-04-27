@@ -8,7 +8,7 @@
   <% end %>
   <div class="my-4 mt-8">
     <%= label f, :email, class: "block text-gray-700 dark:text-gray-300  text-sm font-bold mb-2" %>
-    <%= email_input f, :email, class: "bg-gray-100 dark:bg-gray-900 outline-none appearance-none border border-transparent rounded w-full p-2 text-gray-700 dark:text-gray-300 leading-normal appearance-none focus:outline-none focus:bg-white dark:focus:bg-gray-800 focus:border-gray-300 dark:focus:border-gray-500", placeholder: "user@examplo.com" %>
+    <%= email_input f, :email, class: "bg-gray-100 dark:bg-gray-900 outline-none appearance-none border border-transparent rounded w-full p-2 text-gray-700 dark:text-gray-300 leading-normal appearance-none focus:outline-none focus:bg-white dark:focus:bg-gray-800 focus:border-gray-300 dark:focus:border-gray-500", placeholder: "user@exemplo.com" %>
   </div>
   <div class="my-4">
     <%= label f, :password, class: "block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2" %>
