@@ -62,7 +62,7 @@ const buildDashedDataset = function(plot, presentIndex) {
     data: dashedPlot,
     borderDash: [3, 3],
     borderColor: 'rgba(76,116,104)',
-    pointHoverBackgroundColor: 'rgba(71, 87, 193)',
+    pointHoverBackgroundColor: 'rgba(0, 100, 37)',
     yAxisID: 'y',
   }]
 }

@@ -83,7 +83,7 @@ class Countries extends React.Component {
 
   drawMap() {
     const dataset = this.getDataset();
-    const label = this.props.query.period === 'realtime' ? 'Current visitors' : 'Visitors'
+    const label = this.props.query.period === 'realtime' ? 'Visitantes atuais' : 'Visitantes'
     const defaultFill = this.state.darkTheme ? '#2d3747' : '#f8fafc'
     const highlightFill = this.state.darkTheme ? '#374151' : '#F5F5F5'
     const borderColor = this.state.darkTheme ? '#1f2937' : '#dae1e7'

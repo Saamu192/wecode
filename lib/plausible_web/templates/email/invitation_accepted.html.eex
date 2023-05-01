@@ -1,2 +1,2 @@
-<%= @invitation.email %> has accepted your invitation to <%= @invitation.site.domain %>.
-<%= link("Click here", to: Routes.site_url(PlausibleWeb.Endpoint, :settings_general, @invitation.site.domain)) %> to view site settings.
+<%= @invitation.email %> aceitou o seu convite de <%= @invitation.site.domain %>.
+<%= link("Clique aqui", to: Routes.site_url(PlausibleWeb.Endpoint, :settings_general, @invitation.site.domain)) %> para ver as configurações do site.

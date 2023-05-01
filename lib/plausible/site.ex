@@ -45,7 +45,7 @@ defmodule Plausible.Site do
   end
 
   @domain_unique_error """
-  This domain cannot be registered. Perhaps one of your colleagues registered it? If that's not the case, please contact support@plausible.io
+  Este domínio não pode ser registrado. Talvez outro usuário o tenha registrado? Se não for esse o caso, entre em contato com suporte@mycontext.com.br
   """
 
   def changeset(site, attrs \\ %{}) do
@@ -136,7 +136,7 @@ defmodule Plausible.Site do
     change(site, native_stats_start_at: val)
   end
 
-  def start_import(site, start_date, end_date, imported_source, status \\ "importing") do
+  def start_import(site, start_date, end_date, imported_source, status \\ "importando") do
     change(site,
       imported_data: %{
         start_date: start_date,
@@ -226,7 +226,7 @@ defmodule Plausible.Site do
       add_error(
         changeset,
         :domain,
-        "must not contain URI reserved characters #{@uri_reserved_chars}"
+        "não deve conter caracteres URI reservados #{@uri_reserved_chars}"
       )
     else
       changeset
@@ -235,7 +235,7 @@ defmodule Plausible.Site do
 
   defp validate_domain_format(changeset) do
     validate_format(changeset, :domain, ~r/^[-\.\\\/:\p{L}\d]*$/u,
-      message: "only letters, numbers, slashes and period allowed"
+      message: "apenas letras, números, barras e ponto são permitidos"
     )
   end
 

@@ -43,7 +43,7 @@ function filterText(key, _rawValue, query) {
 
   if (key === "props") {
     const [[propKey, _propValue]] = Object.entries(query.filters['props'])
-    return <>props.{propKey} {type} {clauses.map(({label}) => <b key={label}>{label}</b>).reduce((prev, curr) => [prev, ' or ', curr])} </>
+    return <>{propKey} {type} {clauses.map(({label}) => <b key={label}>{label}</b>).reduce((prev, curr) => [prev, ' or ', curr])} </>
   } else if (formattedFilter) {
     return <>{formattedFilter} {type} {clauses.map(({label}) => <b key={label}>{label}</b>).reduce((prev, curr) => [prev, ' or ', curr])} </>
   }
@@ -204,10 +204,10 @@ class Filters extends React.Component {
   renderListFilter(history, [key, value], query) {
     return (
       <span key={key} title={value} className="flex bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 shadow text-sm rounded mr-2 items-center">
-        <Link title={`Edit filter: ${formattedFilters[key]}`} className="flex w-full h-full items-center py-2 pl-3" to={{ pathname: `/${encodeURIComponent(this.props.site.domain)}/filter/${filterGroupForFilter(key)}`, search: window.location.search }}>
+        <Link title={`Editar filtro: ${formattedFilters[key]}`} className="flex w-full h-full items-center py-2 pl-3" to={{ pathname: `/${encodeURIComponent(this.props.site.domain)}/filter/${filterGroupForFilter(key)}`, search: window.location.search }}>
           <span className="inline-block max-w-2xs md:max-w-xs truncate">{filterText(key, value, query)}</span>
         </Link>
-        <span title={`Remove filter: ${formattedFilters[key]}`} className="flex h-full w-full px-2 cursor-pointer hover:text-indigo-700 dark:hover:text-indigo-500 items-center" onClick={() => removeFilter(key, history, query)}>
+        <span title={`Remover filtro: ${formattedFilters[key]}`} className="flex h-full w-full px-2 cursor-pointer hover:text-indigo-700 dark:hover:text-indigo-500 items-center" onClick={() => removeFilter(key, history, query)}>
           <XMarkIcon className="w-4 h-4" />
         </span>
       </span>

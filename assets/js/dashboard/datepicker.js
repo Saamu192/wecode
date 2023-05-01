@@ -113,33 +113,33 @@ function DatePickerArrows({site, query}) {
 function DisplayPeriod({query, site}) {
   if (query.period === "day") {
     if (isToday(site, query.date)) {
-      return "Today";
+      return "Hoje";
     }
     return formatDay(query.date);
   } if (query.period === '7d') {
-    return 'Last 7 days'
+    return 'Últimos 7 dias'
   } if (query.period === '30d') {
-    return 'Last 30 days'
+    return 'últimos 30 dias'
   } if (query.period === 'month') {
     if (isThisMonth(site, query.date)) {
-      return 'Month to Date'
+      return 'Início do mês a data atual'
     }
     return formatMonthYYYY(query.date)
   } if (query.period === '6mo') {
-    return 'Last 6 months'
+    return 'Últimos 6 meses'
   } if (query.period === '12mo') {
-    return 'Last 12 months'
+    return 'Últimos 12 meses'
   } if (query.period === 'year') {
     if (isThisYear(site, query.date)) {
-      return 'Year to Date'
+      return 'Início do ano a data atual'
     }
     return formatYear(query.date)
   } if (query.period === 'all') {
-    return 'All time'
+    return 'Histórico completo'
   } if (query.period === 'custom') {
     return formatDateRange(site, query.from, query.to)
   }
-  return 'Realtime'
+  return 'Tempo real'
 }
 
 function DatePicker({query, site, history}) {

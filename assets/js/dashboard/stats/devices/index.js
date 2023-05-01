@@ -158,7 +158,7 @@ export default class Devices extends React.Component {
     if (isActive) {
       return (
         <button
-          className="inline-block h-5 font-bold text-indigo-700 active-prop-heading dark:text-indigo-500"
+          className="inline-block h-5 font-bold text-green-600 active-prop-heading dark:text-indigo-500"
         >
           {name}
         </button>
@@ -167,7 +167,7 @@ export default class Devices extends React.Component {
 
     return (
       <button
-        className="cursor-pointer hover:text-indigo-600"
+        className="cursor-pointer hover:text-green-400"
         onClick={this.setMode(mode)}
       >
         {name}

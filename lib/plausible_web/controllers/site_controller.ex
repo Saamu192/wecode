@@ -300,7 +300,7 @@ defmodule PlausibleWeb.SiteController do
     |> Repo.update!()
 
     conn
-    |> put_flash(:success, "Google integration saved successfully")
+    |> put_flash(:success, "Integração do Google salva com sucesso")
     |> redirect(to: Routes.site_path(conn, :settings_search_console, site.domain))
   end
 
@@ -311,7 +311,7 @@ defmodule PlausibleWeb.SiteController do
 
     Repo.delete!(site.google_auth)
 
-    conn = put_flash(conn, :success, "Google account unlinked from Plausible")
+    conn = put_flash(conn, :success, "Conta do Google desvinculada da Context")
 
     panel =
       conn.path_info
@@ -338,12 +338,12 @@ defmodule PlausibleWeb.SiteController do
 
         conn
         |> put_session(site_session_key, nil)
-        |> put_flash(:success, "Your site settings have been saved")
+        |> put_flash(:success, "As configurações do seu site foram salvas")
         |> redirect(to: Routes.site_path(conn, :settings_general, site.domain))
 
       {:error, changeset} ->
         conn
-        |> put_flash(:error, "Could not update your site settings")
+        |> put_flash(:error, "Não foi possível atualizar as configurações do seu site")
         |> render("settings_general.html",
           site: site,
           changeset: changeset,
@@ -357,7 +357,7 @@ defmodule PlausibleWeb.SiteController do
     Plausible.Purge.reset!(site)
 
     conn
-    |> put_flash(:success, "#{site.domain} stats will be reset in a few minutes")
+    |> put_flash(:success, "#{site.domain} as estatísticas serão redefinidas em alguns minutos")
     |> redirect(to: "/#{URI.encode_www_form(site.domain)}/settings/danger-zone")
   end
 
@@ -367,7 +367,7 @@ defmodule PlausibleWeb.SiteController do
     Plausible.Site.Removal.run(site.domain)
 
     conn
-    |> put_flash(:success, "Your site and page views deletion process has started.")
+    |> put_flash(:success, "O processo de exclusão do site e das visualizações de página foi iniciado.")
     |> redirect(to: "/sites")
   end
 
@@ -378,7 +378,7 @@ defmodule PlausibleWeb.SiteController do
       |> Repo.update!()
 
     conn
-    |> put_flash(:success, "Stats for #{site.domain} are now public.")
+    |> put_flash(:success, "Estatísticas para #{site.domain} agora são públicas.")
     |> redirect(to: Routes.site_path(conn, :settings_visibility, site.domain))
   end
 
@@ -389,7 +389,7 @@ defmodule PlausibleWeb.SiteController do
       |> Repo.update!()
 
     conn
-    |> put_flash(:success, "Stats for #{site.domain} are now private.")
+    |> put_flash(:success, "Estatísticas para #{site.domain} agora são privadas.")
     |> redirect(to: Routes.site_path(conn, :settings_visibility, site.domain))
   end
 
@@ -403,7 +403,7 @@ defmodule PlausibleWeb.SiteController do
     |> Repo.insert!()
 
     conn
-    |> put_flash(:success, "You will receive an email report every Monday going forward")
+    |> put_flash(:success, "Você receberá um relatório por e-mail todas as segundas-feiras daqui para frente")
     |> redirect(to: "/#{URI.encode_www_form(site.domain)}/settings/email-reports")
   end
 
@@ -412,7 +412,7 @@ defmodule PlausibleWeb.SiteController do
     Repo.delete_all(from wr in Plausible.Site.WeeklyReport, where: wr.site_id == ^site.id)
 
     conn
-    |> put_flash(:success, "You will not receive weekly email reports going forward")
+    |> put_flash(:success, "Você não receberá relatórios semanais por e-mail daqui para frente")
     |> redirect(to: "/#{URI.encode_www_form(site.domain)}/settings/email-reports")
   end
 
@@ -424,7 +424,7 @@ defmodule PlausibleWeb.SiteController do
     |> Repo.update!()
 
     conn
-    |> put_flash(:success, "Added #{recipient} as a recipient for the weekly report")
+    |> put_flash(:success, "Adicionado #{recipient} como destinatário do relatório semanal")
     |> redirect(to: "/#{URI.encode_www_form(site.domain)}/settings/email-reports")
   end
 
@@ -438,7 +438,7 @@ defmodule PlausibleWeb.SiteController do
     conn
     |> put_flash(
       :success,
-      "Removed #{recipient} as a recipient for the weekly report"
+      "Removido #{recipient} como destinatário do relatório semanal"
     )
     |> redirect(to: "/#{URI.encode_www_form(site.domain)}/settings/email-reports")
   end
@@ -453,7 +453,7 @@ defmodule PlausibleWeb.SiteController do
     |> Repo.insert!()
 
     conn
-    |> put_flash(:success, "You will receive an email report every month going forward")
+    |> put_flash(:success, "Você receberá um relatório por e-mail todos os meses daqui para frente")
     |> redirect(to: "/#{URI.encode_www_form(site.domain)}/settings/email-reports")
   end
 
@@ -462,7 +462,7 @@ defmodule PlausibleWeb.SiteController do
     Repo.delete_all(from mr in Plausible.Site.MonthlyReport, where: mr.site_id == ^site.id)
 
     conn
-    |> put_flash(:success, "You will not receive monthly email reports going forward")
+    |> put_flash(:success, "Você não receberá relatórios mensais por e-mail daqui para frente")
     |> redirect(to: "/#{URI.encode_www_form(site.domain)}/settings/email-reports")
   end
 
@@ -474,7 +474,7 @@ defmodule PlausibleWeb.SiteController do
     |> Repo.update!()
 
     conn
-    |> put_flash(:success, "Added #{recipient} as a recipient for the monthly report")
+    |> put_flash(:success, "Adicionado #{recipient} como destinatário do relatório mensal")
     |> redirect(to: "/#{URI.encode_www_form(site.domain)}/settings/email-reports")
   end
 
@@ -488,7 +488,7 @@ defmodule PlausibleWeb.SiteController do
     conn
     |> put_flash(
       :success,
-      "Removed #{recipient} as a recipient for the monthly report"
+      "Removido #{recipient} como destinatário do relatório mensal"
     )
     |> redirect(to: "/#{URI.encode_www_form(site.domain)}/settings/email-reports")
   end
@@ -507,12 +507,12 @@ defmodule PlausibleWeb.SiteController do
     case res do
       {:ok, _} ->
         conn
-        |> put_flash(:success, "You will a notification with traffic spikes going forward")
+        |> put_flash(:success, "Você receberá uma notificação com picos de tráfego daqui para frente")
         |> redirect(to: "/#{URI.encode_www_form(site.domain)}/settings/email-reports")
 
       {:error, _} ->
         conn
-        |> put_flash(:error, "Unable to create a spike notification")
+        |> put_flash(:error, "Não é possível criar uma notificação de pico de tráfego")
         |> redirect(to: "/#{URI.encode_www_form(site.domain)}/settings/email-reports")
     end
   end
@@ -522,7 +522,7 @@ defmodule PlausibleWeb.SiteController do
     Repo.delete_all(from mr in Plausible.Site.SpikeNotification, where: mr.site_id == ^site.id)
 
     conn
-    |> put_flash(:success, "Spike notification disabled")
+    |> put_flash(:success, "Notificação de pico desativada")
     |> redirect(to: "/#{URI.encode_www_form(site.domain)}/settings/email-reports")
   end
 
@@ -534,7 +534,7 @@ defmodule PlausibleWeb.SiteController do
     |> Repo.update!()
 
     conn
-    |> put_flash(:success, "Notification settings updated")
+    |> put_flash(:success, "Configurações de notificação atualizadas")
     |> redirect(to: "/#{URI.encode_www_form(site.domain)}/settings/email-reports")
   end
 
@@ -546,7 +546,7 @@ defmodule PlausibleWeb.SiteController do
     |> Repo.update!()
 
     conn
-    |> put_flash(:success, "Added #{recipient} as a recipient for the traffic spike notification")
+    |> put_flash(:success, "Adicionado #{recipient} como destinatário da notificação de pico de tráfego")
     |> redirect(to: "/#{URI.encode_www_form(site.domain)}/settings/email-reports")
   end
 
@@ -560,7 +560,7 @@ defmodule PlausibleWeb.SiteController do
     conn
     |> put_flash(
       :success,
-      "Removed #{recipient} as a recipient for the monthly report"
+      "Removido #{recipient} como destinatário do relatório mensal"
     )
     |> redirect(to: "/#{URI.encode_www_form(site.domain)}/settings/email-reports")
   end
@@ -641,12 +641,12 @@ defmodule PlausibleWeb.SiteController do
          ) do
       {1, _} ->
         conn
-        |> put_flash(:success, "Shared Link deleted")
+        |> put_flash(:success, "Link compartilhado excluído")
         |> redirect(to: "/#{URI.encode_www_form(site.domain)}/settings/visibility")
 
       {0, _} ->
         conn
-        |> put_flash(:error, "Could not find Shared Link")
+        |> put_flash(:error, "Não foi possível encontrar o link compartilhado")
         |> redirect(to: "/#{URI.encode_www_form(site.domain)}/settings/visibility")
     end
   end
@@ -662,12 +662,12 @@ defmodule PlausibleWeb.SiteController do
          ) do
       {1, _} ->
         conn
-        |> put_flash(:success, "Custom domain deleted successfully")
+        |> put_flash(:success, "Domínio personalizado excluído com sucesso")
         |> redirect(to: "/#{URI.encode_www_form(site.domain)}/settings/general")
 
       {0, _} ->
         conn
-        |> put_flash(:error, "Failed to delete custom domain")
+        |> put_flash(:error, "Falha ao excluir domínio personalizado")
         |> redirect(to: "/#{URI.encode_www_form(site.domain)}/settings/general")
     end
   end
@@ -714,7 +714,7 @@ defmodule PlausibleWeb.SiteController do
         conn
         |> put_flash(
           :error,
-          "We were unable to authenticate your Google Analytics account. Please check that you have granted us permission to 'See and download your Google Analytics data' and try again."
+          "Não foi possível autenticar sua conta do Google Analytics. Verifique se você nos concedeu permissão para 'Ver e baixar seus dados do Google Analytics' e tente novamente."
         )
         |> redirect(to: Routes.site_path(conn, :settings_general, conn.assigns.site.domain))
 
@@ -722,7 +722,7 @@ defmodule PlausibleWeb.SiteController do
         conn
         |> put_flash(
           :error,
-          "We were unable to list your Google Analytics properties. If the problem persists, please contact support for assistance."
+          "Não foi possível listar suas propriedades do Google Analytics. Se o problema persistir, entre em contato com o suporte para obter assistência."
         )
         |> redirect(to: Routes.site_path(conn, :settings_general, conn.assigns.site.domain))
     end
@@ -752,7 +752,7 @@ defmodule PlausibleWeb.SiteController do
           expires_at: expires_at,
           site: site,
           view_ids: view_ids,
-          selected_view_id_error: "No data found. Nothing to import",
+          selected_view_id_error: "Nenhum dado encontrado. nada para importar",
           layout: {PlausibleWeb.LayoutView, "focus.html"}
         )
 
@@ -839,7 +839,7 @@ defmodule PlausibleWeb.SiteController do
     |> Repo.transaction()
 
     conn
-    |> put_flash(:success, "Import scheduled. An email will be sent when it completes.")
+    |> put_flash(:success, "Importação agendada. Um e-mail será enviado quando ele for concluído.")
     |> redirect(to: Routes.site_path(conn, :settings_general, site.domain))
   end
 

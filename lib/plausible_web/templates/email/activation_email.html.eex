@@ -1,1 +1,1 @@
-Enter <%= @code %> to verify your email address. This code will expire in 4 hours.
+Insira <%= @code %> para verificar seu endereço de e-mail. Este código irá expirar em 4 horas.

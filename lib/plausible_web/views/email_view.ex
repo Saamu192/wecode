@@ -10,10 +10,10 @@ defmodule PlausibleWeb.EmailView do
   end
 
   def greet_recipient(%{user: %{name: name}}) when is_binary(name) do
-    "Hey #{String.split(name) |> List.first()},"
+    "Olá #{String.split(name) |> List.first()},"
   end
 
-  def greet_recipient(_), do: "Hey,"
+  def greet_recipient(_), do: "Olá,"
 
   def date_format(date) do
     Timex.format!(date, "{D} {Mshort} {YYYY}")

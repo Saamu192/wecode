@@ -10,7 +10,7 @@ defmodule PlausibleWeb.Email do
     base_email()
     |> to(user)
     |> tag("activation-email")
-    |> subject("#{code} é o seu código de verificação de e-mail Context")
+    |> subject("#[Context Analytics] {code} é o seu código de verificação de e-mail Context")
     |> render("activation_email.html", user: user, code: code)
   end
 
@@ -18,7 +18,7 @@ defmodule PlausibleWeb.Email do
     base_email()
     |> to(user)
     |> tag("welcome-email")
-    |> subject("Bem vindo a Context")
+    |> subject("[Context Analytics] Bem vindo a Context")
     |> render("welcome_email.html", user: user, unsubscribe: true)
   end
 
@@ -26,7 +26,7 @@ defmodule PlausibleWeb.Email do
     base_email()
     |> to(user)
     |> tag("create-site-email")
-    |> subject("Sua Configuração Context: adicione os detalhes do seu site")
+    |> subject("[Context Analytics] Sua Configuração Context: adicione os detalhes do seu site")
     |> render("create_site_email.html", user: user, unsubscribe: true)
   end
 
@@ -34,7 +34,7 @@ defmodule PlausibleWeb.Email do
     base_email()
     |> to(user)
     |> tag("help-email")
-    |> subject("Sua configuração Context: aguardando as primeiras exibições de página")
+    |> subject("[Context Analytics] Sua configuração Context: aguardando as primeiras exibições de página")
     |> render("site_setup_help_email.html",
       user: user,
       site: site,
@@ -46,7 +46,7 @@ defmodule PlausibleWeb.Email do
     base_email()
     |> to(user)
     |> tag("setup-success-email")
-    |> subject("A Context agora está rastreando as estatísticas do seu site")
+    |> subject("[Context Analytics] A Context agora está rastreando as estatísticas do seu site")
     |> render("site_setup_success_email.html",
       user: user,
       site: site,
@@ -58,7 +58,7 @@ defmodule PlausibleWeb.Email do
     base_email()
     |> to(user)
     |> tag("check-stats-email")
-    |> subject("Verifique as estatísticas do seu site na Context")
+    |> subject("[Context Analytics] Verifique as estatísticas do seu site na Context")
     |> render("check_stats_email.html", user: user, unsubscribe: true)
   end
 
@@ -66,7 +66,7 @@ defmodule PlausibleWeb.Email do
     base_email(%{layout: nil})
     |> to(email)
     |> tag("password-reset-email")
-    |> subject("Redifinição de senha Context")
+    |> subject("[Context Analytics] Redefinição de senha Context")
     |> render("password_reset_email.html", reset_link: reset_link)
   end
 
@@ -74,7 +74,7 @@ defmodule PlausibleWeb.Email do
     base_email()
     |> to(user)
     |> tag("trial-one-week-reminder")
-    |> subject("Seu teste Context expira na próxima semana")
+    |> subject("[Context Analytics] Seu teste Context expira na próxima semana")
     |> render("trial_one_week_reminder.html", user: user, unsubscribe: true)
   end
 
@@ -84,7 +84,7 @@ defmodule PlausibleWeb.Email do
     base_email()
     |> to(user)
     |> tag("trial-upgrade-email")
-    |> subject("Seu teste Context termina #{day}")
+    |> subject("[Context Analytics] Seu teste Context termina #{day}")
     |> render("trial_upgrade_email.html",
       user: user,
       day: day,
@@ -99,7 +99,7 @@ defmodule PlausibleWeb.Email do
     base_email()
     |> to(user)
     |> tag("trial-over-email")
-    |> subject("Seu teste Context terminou")
+    |> subject("[Context Analytics] Seu teste Context terminou")
     |> render("trial_over_email.html", user: user, unsubscribe: true)
   end
 
@@ -107,7 +107,7 @@ defmodule PlausibleWeb.Email do
     base_email(%{layout: nil})
     |> to(email)
     |> tag("weekly-report")
-    |> subject("#{assigns[:name]} relatório para #{site.domain}")
+    |> subject("[Context Analytics] #{assigns[:name]} relatório para #{site.domain}")
     |> render("weekly_report.html", Keyword.put(assigns, :site, site))
   end
 
@@ -115,7 +115,7 @@ defmodule PlausibleWeb.Email do
     base_email()
     |> to(email)
     |> tag("spike-notification")
-    |> subject("Pico de tráfego ativado #{site.domain}")
+    |> subject("[Context Analytics] Pico de tráfego ativado #{site.domain}")
     |> render("spike_notification.html", %{
       site: site,
       current_visitors: current_visitors,
@@ -156,7 +156,7 @@ defmodule PlausibleWeb.Email do
     base_email()
     |> to(user)
     |> tag("dashboard-locked")
-    |> subject("[Action required] Seu painel Context agora está bloqueado")
+    |> subject("[Context Analytics]  Seu painel Context agora está bloqueado")
     |> render("dashboard_locked.html", %{
       user: user,
       usage: usage,
@@ -299,7 +299,7 @@ defmodule PlausibleWeb.Email do
     base_email()
     |> to(user)
     |> tag("import-success-email")
-    |> subject("dados importados Google Analytics para #{site.domain}")
+    |> subject("[Context Analytics] dados importados Google Analytics para #{site.domain}")
     |> render("google_analytics_import.html", %{
       site: site,
       link: PlausibleWeb.Endpoint.url() <> "/" <> URI.encode_www_form(site.domain),
@@ -312,7 +312,7 @@ defmodule PlausibleWeb.Email do
     base_email()
     |> to(user)
     |> tag("import-failure-email")
-    |> subject("Importação de dados Google Analytics falhou em #{site.domain}")
+    |> subject("[Context Analytics] Importação de dados Google Analytics falhou em #{site.domain}")
     |> render("google_analytics_import.html", %{
       user: user,
       site: site,
@@ -327,7 +327,7 @@ defmodule PlausibleWeb.Email do
     |> to("suporte@mycontext.com.br")
     |> put_param("ReplyTo", reported_by)
     |> tag("sentry")
-    |> subject("Feedback para rastreamento #{trace_id}")
+    |> subject("[Context Analytics] Feedback para rastreamento #{trace_id}")
     |> render("error_report_email.html", %{
       reported_by: reported_by,
       feedback: feedback,

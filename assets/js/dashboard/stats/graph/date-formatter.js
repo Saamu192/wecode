@@ -1,6 +1,6 @@
 import {parseUTCDate, formatMonthYYYY, formatDayShort} from '../../util/date'
 
-const browserDateFormat = Intl.DateTimeFormat(navigator.language, { hour: 'numeric' })
+const browserDateFormat = Intl.DateTimeFormat("pt-BR", { hour: 'numeric' })
 
 const is12HourClock = function () {
   return browserDateFormat.resolvedOptions().hour12

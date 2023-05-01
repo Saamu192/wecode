@@ -11,9 +11,9 @@ export const FILTER_GROUPS = {
 }
 
 export const FILTER_TYPES = {
-  isNot: 'is not',
-  contains: 'contains',
-  is: 'is'
+  isNot: 'não é',
+  contains: 'contém',
+  is: 'é'
 };
 
 export const FILTER_PREFIXES = {
@@ -102,11 +102,11 @@ export function parseQueryFilter(query, filter) {
 
 export function formatFilterGroup(filterGroup) {
   if (filterGroup === 'utm') {
-    return 'UTM tags'
+    return 'UTM Tags'
   } else if (filterGroup === 'location') {
-    return 'Location'
+    return 'Localização'
   } else if (filterGroup === 'props') {
-    return 'Property'
+    return 'Propriedade'
   } else {
     return formattedFilters[filterGroup]
   }
@@ -127,26 +127,26 @@ export function filterGroupForFilter(filter) {
 }
 
 export const formattedFilters = {
-  'goal': 'Goal',
-  'props': 'Property',
-  'prop_key': 'Property',
-  'prop_value': 'Value',
-  'source': 'Source',
-  'utm_medium': 'UTM Medium',
-  'utm_source': 'UTM Source',
-  'utm_campaign': 'UTM Campaign',
-  'utm_content': 'UTM Content',
-  'utm_term': 'UTM Term',
-  'referrer': 'Referrer URL',
-  'screen': 'Screen size',
-  'browser': 'Browser',
-  'browser_version': 'Browser Version',
-  'os': 'Operating System',
-  'os_version': 'Operating System Version',
-  'country': 'Country',
-  'region': 'Region',
-  'city': 'City',
-  'page': 'Page',
-  'entry_page': 'Entry Page',
-  'exit_page': 'Exit Page'
+  'goal': 'Métrica',
+  'props': 'Propriedade',
+  'prop_key': 'Propriedade',
+  'prop_value': 'Valor',
+  'source': 'Fonte',
+  'utm_medium': 'Mídias UTM',
+  'utm_source': 'Fontes UTM',
+  'utm_campaign': 'Campanhas UTM',
+  'utm_content': 'Conteúdo UTM',
+  'utm_term': 'Termo UTM',
+  'referrer': 'Referência URL',
+  'screen': 'Dispositivo',
+  'browser': 'Navegador',
+  'browser_version': 'Versão do navegador',
+  'os': 'Sistema Operacional',
+  'os_version': 'Versão do sistema operacional',
+  'country': 'País',
+  'region': 'Região',
+  'city': 'Cidade',
+  'page': 'Página',
+  'entry_page': 'Página de entrada',
+  'exit_page': 'Página de saída'
 }

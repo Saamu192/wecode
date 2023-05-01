@@ -1,5 +1,5 @@
 <div class="mx-auto mt-6 text-center dark:text-white-300">
-  <h1 class="text-3xl font-black text-gray-900">
+  <h1 class="text-3xl font-black text-gray-100 dark:text-gray-100">
     <%= if @is_selfhost do %>
     Faça seu cadastro na Context Analytics
     <% else %>
@@ -11,7 +11,7 @@
 
 <div class="w-full max-w-3xl mt-4 mx-auto flex flex-shrink-0">
   <%= form_for @changeset, "/register", [class: "w-full max-w-md mx-auto bg-white dark:bg-gray-800 shadow-md rounded px-8 py-6 mb-4 mt-8", id: "register-form"], fn f -> %>
-    <h2 class="text-xl font-black dark:text-gray-700">Preencha seus dados</h2>
+    <h2 class="text-xl font-black dark:text-gray-100">Preencha seus dados</h2>
     <div class="my-4">
       <%= label f, :name, "Nome Completo", class: "block text-sm font-medium text-gray-700 dark:text-gray-300" %>
       <div class="mt-1">
@@ -46,7 +46,7 @@
 
     <div class="my-4">
       <div class="flex justify-between">
-      <%= label f, :password, class: "block text-sm font-medium text-gray-700 dark:text-gray-300" %>
+      <%= label f, :password,"Senha", class: "block text-sm font-medium text-gray-700 dark:text-gray-300" %>
       <p class="text-xs text-gray-500 mt-1">Min 6 caracteres</p>
       </div>
       <div class="mt-1">
@@ -56,7 +56,7 @@
     </div>
 
     <div class="my-4">
-      <%= label f, :password_confirmation, class: "block text-sm font-medium text-gray-700 dark:text-gray-300" %>
+      <%= label f, :password_confirmation,"Confirmação da senha", class: "block text-sm font-medium text-gray-700 dark:text-gray-300" %>
       <div class="mt-1">
         <%= password_input f, :password_confirmation, class: "dark:bg-gray-900 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 dark:border-gray-500 rounded-md dark:text-gray-300" %>
       </div>

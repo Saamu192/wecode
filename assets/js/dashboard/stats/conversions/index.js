@@ -100,13 +100,13 @@ export default class Conversions extends React.Component {
     } else if (this.state.goals) {
       return (
         <React.Fragment>
-          <h3 className="font-bold dark:text-gray-100">{this.props.title || "Goal Conversions"}</h3>
+          <h3 className="font-bold dark:text-gray-100">{this.props.title || "Conversão de Metas"}</h3>
           <div className="flex items-center justify-between mt-3 mb-2 text-xs font-bold tracking-wide text-gray-500 dark:text-gray-400">
-            <span>Goal</span>
+            <span>Métrica</span>
             <div className="text-right">
-              <span className="inline-block w-20">Uniques</span>
+              <span className="inline-block w-20">únicos</span>
               {viewport > MOBILE_UPPER_WIDTH && <span className="inline-block w-20">Total</span>}
-              <span className="inline-block w-20">CR</span>
+              <span className="inline-block w-20">CV</span>
             </div>
           </div>
           <FlipMove>

@@ -4,5 +4,5 @@
 <% else %>
   <%= link("Clique aqui", to: Routes.auth_url(PlausibleWeb.Endpoint, :register_form), invitation: @invitation.invitation_id) %> para criar sua conta.
   <br /><br />
-  Context é uma ferramenta de análise de sites leve e de código aberto. Esperamos que você goste de nossa abordagem simples e ética para rastrear os visitantes do site.
+  Context é uma ferramenta de análise de sites. Esperamos que você goste de nossa abordagem simples e ética para rastrear os visitantes do site.
 <% end %>

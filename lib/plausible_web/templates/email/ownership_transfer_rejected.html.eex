@@ -1,2 +1,2 @@
-<%= @invitation.email %> has rejected the ownership transfer of <%= @invitation.site.domain %>.
-<%= link("Click here", to: Routes.site_url(PlausibleWeb.Endpoint, :settings_general, @invitation.site.domain)) %> to view site settings.
+<%= @invitation.email %> rejeitou a transferência de propriedade de <%= @invitation.site.domain %>.
+<%= link("Clique aqui", to: Routes.site_url(PlausibleWeb.Endpoint, :settings_general, @invitation.site.domain)) %> para ver as configurações do site.

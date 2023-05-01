@@ -66,7 +66,7 @@ class GoogleKeywordsModal extends React.Component {
             <RocketIcon />
             <div className="text-lg">The site is not connected to Google Search Keywords</div>
             <div className="text-lg">Configure the integration to view search terms</div>
-            <a href={`/${encodeURIComponent(this.props.site.domain)}/settings/search-console`} className="button mt-4">Connect with Google</a>
+            <a href={`/${encodeURIComponent(this.props.site.domain)}/settings/search-console`} className="button mt-4">Conecte com Google</a>
           </div>
         )
       } else {
@@ -83,8 +83,8 @@ class GoogleKeywordsModal extends React.Component {
         <table className="w-max overflow-x-auto md:w-full table-striped table-fixed">
           <thead>
             <tr>
-              <th className="p-2 w-48 md:w-56 lg:w-1/3 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="left">Search Term</th>
-              <th className="p-2 w-32 lg:w-1/2 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">Visitors</th>
+              <th className="p-2 w-48 md:w-56 lg:w-1/3 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="left">Termo de pesquisa</th>
+              <th className="p-2 w-32 lg:w-1/2 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">Visitantes</th>
             </tr>
           </thead>
           <tbody>
@@ -96,7 +96,7 @@ class GoogleKeywordsModal extends React.Component {
       return (
         <div className="text-center text-gray-700 dark:text-gray-300 mt-6">
           <RocketIcon />
-          <div className="text-lg">Could not find any search terms for this period</div>
+          <div className="text-lg">Não foi possível encontrar nenhum termo de pesquisa para este período</div>
         </div>
       )
     }
@@ -123,7 +123,7 @@ class GoogleKeywordsModal extends React.Component {
           <div className="my-4 border-b border-gray-300 dark:border-gray-500"></div>
           <main className="modal__content">
             <h1 className="text-xl font-semibold mb-0 leading-none dark:text-gray-200">
-              {this.state.totalVisitors} visitors from Google<br />
+              {this.state.totalVisitors} visitantes do Google<br />
             </h1>
             {this.renderGoalText()}
             { this.renderKeywords() }

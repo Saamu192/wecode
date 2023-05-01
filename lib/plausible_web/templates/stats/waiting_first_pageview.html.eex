@@ -25,7 +25,7 @@
     <div class="my-44">
       <div class="block pulsating-circle top-1/2 left-1/2"></div>
       <p class="text-gray-600 dark:text-gray-400 text-xs absolute left-0 bottom-0 mb-6 w-full text-center leading-normal">
-        Precisa ver o código snippet novamente? <%= link("Clique aqui", to: "/#{URI.encode_www_form(@site.domain)}/snippet", class: "text-indigo-600 dark:text-indigo-500 text-underline")%><br />
+        Precisa ver o código snippet novamente? <%= link("Clique aqui", to: "/#{URI.encode_www_form(@site.domain)}/snippet", class: "text-green-400 dark:text-green-400 text-underline")%><br />
       </p>
     </div>
   </div>

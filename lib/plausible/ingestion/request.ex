@@ -106,7 +106,7 @@ defmodule Plausible.Ingestion.Request do
 
     case raw do
       "" ->
-        Changeset.add_error(changeset, :domain, "can't be blank")
+        Changeset.add_error(changeset, :domain, "não pode ficar em branco")
 
       raw when is_binary(raw) ->
         domains =
@@ -122,7 +122,7 @@ defmodule Plausible.Ingestion.Request do
         if from_uri do
           Changeset.put_change(changeset, :domains, [from_uri])
         else
-          Changeset.add_error(changeset, :domain, "can't be blank")
+          Changeset.add_error(changeset, :domain, "não pode ficar em branco")
         end
     end
   end

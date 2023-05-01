@@ -28,7 +28,7 @@
         Redefina todos os dados, mas mantenha a configuração do site intacta
         </p>
       </div>
-      <%= link("Resetar #{@site.domain}", to: "/#{URI.encode_www_form(@site.domain)}/stats", method: :delete, class: "inline-block mt-4 px-4 py-2 border border-gray-300 dark:border-gray-500 text-sm leading-5 font-medium rounded-md text-red-700 bg-white dark:bg-gray-800 hover:text-red-500 dark:hover:text-red-400 focus:outline-none focus:border-blue-300 focus:ring active:text-red-800 active:bg-gray-50 transition ease-in-out duration-150", data: [confirm: "Resetting the stats cannot be reversed. Are you sure?"]) %>
+      <%= link("Resetar #{@site.domain}", to: "/#{URI.encode_www_form(@site.domain)}/stats", method: :delete, class: "inline-block mt-4 px-4 py-2 border border-gray-300 dark:border-gray-500 text-sm leading-5 font-medium rounded-md text-red-700 bg-white dark:bg-gray-800 hover:text-red-500 dark:hover:text-red-400 focus:outline-none focus:border-blue-300 focus:ring active:text-red-800 active:bg-gray-50 transition ease-in-out duration-150", data: [confirm: "A redefinição das estatísticas não pode ser revertida. Tem certeza?"]) %>
     </li>
     <div class="border-b border-gray-200 dark:border-gray-500"></div>
 
@@ -41,7 +41,7 @@
         Remova permanentemente todas as estatísticas e a configuração do site
         </p>
       </div>
-      <%= link "Deletar #{@site.domain}", to: "/#{URI.encode_www_form(@site.domain)}", method: :delete, class: "inline-block px-4 py-2 border border-transparent font-medium rounded-md text-red-700 dark:text-red-800 bg-red-100 dark:bg-red-200 hover:bg-red-50 dark:hover:bg-red-300 focus:outline-none focus:border-red-300 focus:ring active:bg-red-200 transition ease-in-out duration-150 sm:text-sm sm:leading-5", data: [confirm: "Deleting the site data cannot be reversed. Are you sure?"] %>
+      <%= link "Deletar #{@site.domain}", to: "/#{URI.encode_www_form(@site.domain)}", method: :delete, class: "inline-block px-4 py-2 border border-transparent font-medium rounded-md text-red-700 dark:text-red-800 bg-red-100 dark:bg-red-200 hover:bg-red-50 dark:hover:bg-red-300 focus:outline-none focus:border-red-300 focus:ring active:bg-red-200 transition ease-in-out duration-150 sm:text-sm sm:leading-5", data: [confirm: "A exclusão dos dados do site não pode ser revertida. Tem certeza?"] %>
     </li>
   </div>
 </div>

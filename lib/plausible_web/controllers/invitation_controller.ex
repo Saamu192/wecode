@@ -46,12 +46,12 @@ defmodule PlausibleWeb.InvitationController do
         Plausible.Billing.SiteLocker.check_sites_for(updated_user)
 
         conn
-        |> put_flash(:success, "You now have access to #{invitation.site.domain}")
+        |> put_flash(:success, "Agora você tem acesso a #{invitation.site.domain}")
         |> redirect(to: "/#{URI.encode_www_form(invitation.site.domain)}")
 
       {:error, _, _} ->
         conn
-        |> put_flash(:error, "Something went wrong, please try again")
+        |> put_flash(:error, "Algo deu errado, por favor, tente novamente")
         |> redirect(to: "/sites")
     end
   end
@@ -92,7 +92,7 @@ defmodule PlausibleWeb.InvitationController do
     notify_invitation_rejected(invitation)
 
     conn
-    |> put_flash(:success, "You have rejected the invitation to #{invitation.site.domain}")
+    |> put_flash(:success, "Você rejeitou o convite de #{invitation.site.domain}")
     |> redirect(to: "/sites")
   end
 
@@ -124,7 +124,7 @@ defmodule PlausibleWeb.InvitationController do
     Repo.delete!(invitation)
 
     conn
-    |> put_flash(:success, "You have removed the invitation for #{invitation.email}")
+    |> put_flash(:success, "Você removeu o convite de #{invitation.email}")
     |> redirect(to: Routes.site_path(conn, :settings_general, invitation.site.domain))
   end
 end

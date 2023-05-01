@@ -130,7 +130,7 @@
     <div class="text-sm text-gray-700 dark:text-gray-300 mt-6">
 
       <%= form_for Plausible.Site.SpikeNotification.changeset(@spike_notification, %{}), "/sites/#{URI.encode_www_form(@site.domain)}/spike-notification", fn f -> %>
-        <h4 class="font-bold my-2">Current visitor threshold</h4>
+        <h4 class="font-bold my-2">Limite de visitantes atuais</h4>
         <div class="mt-1 flex rounded-md shadow-sm max-w-md">
           <div class="relative flex items-stretch flex-grow focus-within:z-10">
             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">

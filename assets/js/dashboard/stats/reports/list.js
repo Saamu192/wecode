@@ -59,14 +59,14 @@ export default function ListReport(props) {
 
   function label() {
     if (props.query.period === 'realtime') {
-      return 'Current visitors'
+      return 'Visitantes atuais'
     }
 
     if (showConversionRate) {
-      return 'Conversions'
+      return 'Conversões'
     }
 
-    return props.valueLabel || 'Visitors'
+    return props.valueLabel || 'Visitantes'
   }
 
   function renderListItem(listItem) {

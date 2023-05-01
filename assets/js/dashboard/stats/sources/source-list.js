@@ -96,7 +96,7 @@ class AllSources extends React.Component {
       return (
         <React.Fragment>
           <div className="flex items-center justify-between mt-3 mb-2 text-xs font-bold tracking-wide text-gray-500">
-            <span>Source</span>
+            <span>Fonte</span>
             <div className="text-right">
               <span className="inline-block w-20">{this.label()}</span>
               {this.showConversionRate() && <span className="inline-block w-20">CR</span>}

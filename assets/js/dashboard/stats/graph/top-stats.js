@@ -29,10 +29,10 @@ export default class TopStats extends React.Component {
     })
 
     if (comparison > 0) {
-      const color = name === 'Bounce rate' ? 'text-red-400' : 'text-green-500'
+      const color = name === 'Taxa de rejeição' ? 'text-red-400' : 'text-green-500'
       return <span className={defaultClassName}><span className={color + ' font-bold'}>&uarr;</span> {formattedComparison}%</span>
     } else if (comparison < 0) {
-      const color = name === 'Bounce rate' ? 'text-green-500' : 'text-red-400'
+      const color = name === 'Taxa de rejeição' ? 'text-green-500' : 'text-red-400'
       return <span className={defaultClassName}><span className={color + ' font-bold'}>&darr;</span> {formattedComparison}%</span>
     } else if (comparison === 0) {
       return <span className={noChangeClassName}>&#12336; 0%</span>
@@ -42,9 +42,9 @@ export default class TopStats extends React.Component {
   }
 
   topStatNumberShort(name, value) {
-    if (['visit duration', 'time on page'].includes(name.toLowerCase())) {
+    if (['duração da visita', 'tempo na página'].includes(name.toLowerCase())) {
       return durationFormatter(value)
-    } else if (['bounce rate', 'conversion rate'].includes(name.toLowerCase())) {
+    } else if (['taxa de rejeição', 'taxa de conversão'].includes(name.toLowerCase())) {
       return value + '%'
     } else {
       return numberFormatter(value)
@@ -52,9 +52,9 @@ export default class TopStats extends React.Component {
   }
 
   topStatNumberLong(name, value) {
-    if (['visit duration', 'time on page'].includes(name.toLowerCase())) {
+    if (['duração da visita', 'tempo na página'].includes(name.toLowerCase())) {
       return durationFormatter(value)
-    } else if (['bounce rate', 'conversion rate'].includes(name.toLowerCase())) {
+    } else if (['taxa de rejeição', 'taxa de conversão'].includes(name.toLowerCase())) {
       return value + '%'
     } else {
       return (value || 0).toLocaleString()
@@ -79,7 +79,8 @@ export default class TopStats extends React.Component {
           {this.topStatNumberLong(stat.name, stat.value)} {statName}
         </div>}
 
-        {stat.name === 'Current visitors' && <p className="font-normal text-xs">Last updated <SecondsSinceLastLoad lastLoadTimestamp={lastLoadTimestamp}/>s ago</p>}
+        {stat.name === 'Current visitors' && <p className="font-normal text-xs">útima atualização <SecondsSinceLastLoad lastLoadTimestamp={lastLoadTimestamp}/>s atrás</p>}
+        {console.log("83 top-stats", stat.name)};
         {stat.name === 'Views per visit' && showingImported && <p className="font-normal text-xs whitespace-nowrap">Based only on native data</p>}
       </div>
     )

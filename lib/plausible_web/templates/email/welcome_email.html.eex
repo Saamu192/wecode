@@ -4,12 +4,9 @@ Estamos super empolgados em ter você a bordo!
 Veja como aproveitar ao máximo sua experiência no Context:
 <br /><br />
 * <%= link("Ative o report de e-mails", to: "https://app.mycontext.com.br/docs/email-reports") %> and notifications for <%= link("traffic spikes", to: "https://app.mycontext.com.br/docs/traffic-spikes") %><br />
-* <%= link("Integrate with Search Console", to: "https://app.mycontext.com.br/docs/google-search-console-integration") %> to get keyword phrases people find your site with<br />
-* <%= link("Invite team members and other collaborators", to: "https://app.mycontext.com.br/docs/users-roles") %><br />
-* Set up easy goals including <%= link("404 error pages", to: "https://app.mycontext.com.br/docs/error-pages-tracking-404") %>, <%= link("file downloads", to: "https://app.mycontext.com.br/docs/file-downloads-tracking") %> and <%= link("outbound link clicks", to: "https://app.mycontext.com.br/docs/outbound-link-click-tracking") %><br />
-* <%= link("Opt out from counting your own visits", to: "https://app.mycontext.com.br/docs/excluding") %><br />
-* If you're concerned about adblockers, <%= link("set up a proxy to bypass them", to: "https://app.mycontext.com.br/docs/proxy/introduction") %><br />
+* <%= link("Integre com o Google Console", to: "https://app.mycontext.com.br/docs/google-search-console-integration") %> to get keyword phrases people find your site with<br />
+* <%= link("Convide seus amigos e colaboradores", to: "https://app.mycontext.com.br/docs/users-roles") %><br />
 <br /><br />
-Then you're ready to start exploring your fast loading, ethical and actionable <%= link("app.mycontext.com.brshboard", to: "https://app.mycontext.com.br/sites") %>.
+Então você está pronto para começar a explorar seu carregamento rápido, ético e responsivo <%= link("app.mycontext.com.br", to: "https://app.mycontext.com.br/sites") %>.
 <br /><br />
-Have a question, feedback or need some guidance? Do reply back to this email.
+Tem alguma pergunta, feedback ou precisa de alguma orientação? Mande-nos um email para suporte@mycontext.com.br

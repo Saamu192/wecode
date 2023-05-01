@@ -117,14 +117,14 @@ class SourcesModal extends React.Component {
 
   label() {
     if (this.state.query.period === 'realtime') {
-      return 'Current visitors'
+      return 'Visitantes atuais'
     }
 
     if (this.showConversionRate()) {
-      return 'Conversions'
+      return 'Conversões'
     }
 
-    return 'Visitors'
+    return 'Visitantes'
   }
 
   renderLoading() {

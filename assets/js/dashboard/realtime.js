@@ -16,7 +16,7 @@ class Realtime extends React.Component {
     if (this.props.site.hasGoals) {
       return (
         <div className="items-start justify-between block w-full mt-6 md:flex">
-          <Conversions site={this.props.site} query={this.props.query} title="Goal Conversions (last 30 min)" />
+          <Conversions site={this.props.site} query={this.props.query} title="Conversão Metas (últimos 30 min)" />
         </div>
       )
     }

@@ -1,11 +1,11 @@
-Congrats! The Plausible script has been installed correctly on <%= link(@site.domain, to: "https://#{@site.domain}") %>. Your website traffic is now being tracked without compromising the user experience and the privacy of your visitors.
+Parabéns! O script Context foi instalado corretamente em <%= link(@site.domain, to: "https://#{@site.domain}") %>. O tráfego do seu site agora está sendo rastreado sem comprometer a experiência do usuário e a privacidade de seus visitantes.
 <br /><br />
-<%= link("Check your stats", to: "#{plausible_url()}/#{URI.encode_www_form(@site.domain)}") %>
+<%= link("Verifique suas estatísticas", to: "#{plausible_url()}/#{URI.encode_www_form(@site.domain)}") %>
 <br /><br />
 <%= if Plausible.Billing.on_trial?(@user) do %>
-  You're on a 30-day unlimited-use free trial with no obligations so do take your time to explore your simple and privacy-friendly website analytics dashboard.
+  Você está em uma avaliação gratuita de uso ilimitado de 30 dias sem obrigações, portanto, reserve um tempo para explorar seu painel de análise de site simples e amigável à privacidade.
   <br /><br />
 <% end %>
-PS: You can import your historical Google Analytics (Universal Analytics) stats into your Plausible dashboard. <%= link("Learn how our GA importer works", to: "https://plausible.io/docs/google-analytics-import") %>.
+PS: Você pode importar suas estatísticas históricas do Google Analytics (Universal Analytics) para seu painel Context.
 <br /><br />
-Do reply back to this email if you have any questions.
+Mande-nos um email para suporte@mycontext.com.br se tiver alguma dúvida.

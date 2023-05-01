@@ -32,14 +32,14 @@ class ReferrerDrilldownModal extends React.Component {
 
   label() {
     if (this.state.query.period === 'realtime') {
-      return 'Current visitors'
+      return 'Visitantes atuais'
     }
 
     if (this.showConversionRate()) {
-      return 'Conversions'
+      return 'Conversões'
     }
 
-    return 'Visitors'
+    return 'Visitantes'
   }
 
   formatBounceRate(ref) {
@@ -113,12 +113,12 @@ class ReferrerDrilldownModal extends React.Component {
             <table className="w-max overflow-x-auto md:w-full table-striped table-fixed mt-4">
               <thead>
                 <tr>
-                  <th className="p-2 w-48 md:w-56 lg:w-1/3 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="left">Referrer</th>
-                  {this.showConversionRate() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">Total visitors</th>}
+                  <th className="p-2 w-48 md:w-56 lg:w-1/3 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="left">Referenciador</th>
+                  {this.showConversionRate() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">Total visitantes</th>}
                   <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">{this.label()}</th>
-                  {this.showExtra() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">Bounce rate</th>}
-                  {this.showExtra() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">Visit duration</th>}
-                  {this.showConversionRate() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">CR</th>}
+                  {this.showExtra() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">Taxa de rejeição</th>}
+                  {this.showExtra() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">Duração da visita</th>}
+                  {this.showConversionRate() && <th className="p-2 w-32 text-xs tracking-wide font-bold text-gray-500 dark:text-gray-400" align="right">CV</th>}
                 </tr>
               </thead>
               <tbody>

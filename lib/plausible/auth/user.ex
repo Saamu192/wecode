@@ -16,13 +16,15 @@ defmodule Plausible.Auth.User do
 
   @type t() :: %__MODULE__{}
 
-  @required [:email, :name, :password, :password_confirmation]
+  @required [:email, :name, :password, :password_confirmation, :phone, :company]
   schema "users" do
     field :email, :string
     field :password_hash
     field :password, :string, virtual: true
     field :password_confirmation, :string, virtual: true
     field :name, :string
+    field :phone, :string
+    field :company, :string
     field :last_seen, :naive_datetime
     field :trial_expiry_date, :date
     field :theme, :string
