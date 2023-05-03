@@ -188,12 +188,12 @@ export default function PlausibleCombobox(props) {
           )}
           { noMatchesFound && !props.freeChoice && (
             <div className="relative cursor-default select-none py-2 px-4 text-gray-700 dark:text-gray-300">
-              No matches found in the current dashboard. Try selecting a different time range or searching for something different
+              Nenhuma correspondência encontrada no painel atual. Tente selecionar um intervalo de tempo diferente ou pesquisar algo diferente
             </div>
           )}
           { noMatchesFound && props.freeChoice && (
             <div className="relative cursor-default select-none py-2 px-4 text-gray-700 dark:text-gray-300">
-              Start typing to apply filter
+              Comece a digitar para aplicar o filtro
             </div>
           )}
           { matchesFound && (

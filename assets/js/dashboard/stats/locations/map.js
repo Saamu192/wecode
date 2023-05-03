@@ -55,7 +55,7 @@ class Countries extends React.Component {
     const paletteScale = d3.scale.linear()
       .domain([0,maxValue])
       .range([
-        this.state.darkTheme ? "#2d552d" : "#f3ebff",
+        this.state.darkTheme ? "#2d552d" : "#2d552d",
         this.state.darkTheme ? "#64f264" : "#77e977"
       ])
 
@@ -131,23 +131,12 @@ class Countries extends React.Component {
     });
   }
 
-  geolocationDbNotice() {
-    if (this.props.site.isDbip) {
-      return (
-        <span className="text-xs text-gray-500 absolute bottom-4 right-3">IP Geolocation by <a target="_blank" href="https://db-ip.com" rel="noreferrer" className="text-indigo-600">DB-IP</a></span>
-      )
-    }
-
-    return null
-  }
-
   renderBody() {
     if (this.state.countries) {
       return (
         <>
           <div className="mx-auto mt-4" style={{width: '100%', maxWidth: '475px', height: '335px'}} id="map-container"></div>
           <MoreLink site={this.props.site} list={this.state.countries} endpoint="countries" />
-          { this.geolocationDbNotice() }
         </>
       )
     }

@@ -174,7 +174,7 @@ export default class PropertyBreakdown extends React.Component {
       return (
         <div className="w-full text-center my-4">
           <button onClick={this.loadMore.bind(this)} type="button" className="button">
-            Load more
+            Carregar mais
           </button>
         </div>
       )
@@ -199,7 +199,7 @@ export default class PropertyBreakdown extends React.Component {
     return (
       <div className="w-full pl-3 sm:pl-6 mt-4">
         <div className="flex-col sm:flex-row flex items-center pb-1">
-          <span className="text-xs font-bold text-gray-600 dark:text-gray-300 self-start sm:self-auto mb-1 sm:mb-0">Breakdown by:</span>
+          <span className="text-xs font-bold text-gray-600 dark:text-gray-300 self-start sm:self-auto mb-1 sm:mb-0">Divisão por:</span>
           <ul className="flex flex-wrap font-medium text-xs text-gray-500 dark:text-gray-400 leading-5 pl-1 sm:pl-2">
             { this.props.goal.prop_names.map(this.renderPill.bind(this)) }
           </ul>
